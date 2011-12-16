@@ -1,96 +1,36 @@
-/* line 13, scss/_reset.scss */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
-/* line 22, scss/_reset.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
-/* line 23, scss/_reset.scss */
-body {
-  line-height: 1;
-}
+body { line-height: 1; }
 
-/* line 24, scss/_reset.scss */
-ol, ul {
-  list-style: none;
-}
+ol, ul { list-style: none; }
 
-/* line 25, scss/_reset.scss */
-blockquote, q {
-  quotes: none;
-}
+blockquote, q { quotes: none; }
 
-/* line 27, scss/_reset.scss */
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
 
-/* line 28, scss/_reset.scss */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+table { border-collapse: collapse; border-spacing: 0; }
 
 /* CLEAR FIX*/
-/* line 2, scss/_global.scss */
-.cf:before, .cf:after {
-  content: "";
-  display: table;
-}
+.cf:before, .cf:after { content: ""; display: table; }
 
-/* line 3, scss/_global.scss */
-.cf:after {
-  clear: both;
-}
+.cf:after { clear: both; }
 
 /* For IE 6/7 (trigger hasLayout) */
-/* line 5, scss/_global.scss */
-.cf {
-  zoom: 1;
-}
+.cf { zoom: 1; }
 
-/* line 1, scss/_layout.scss */
-body {
-  background-color: #1e5799;
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF1E5799', endColorstr='#FF7DB9E8');
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #1e5799), color-stop(50%, #2989d8), color-stop(51%, #207cca), color-stop(100%, #7db9e8));
-  background-image: -webkit-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  background-image: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  background-image: -o-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  background-image: -ms-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  background-image: linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-}
+/* Base layout
+--------------------------------*/
+html, body { height: 100%; }
 
-/* line 8, scss/_layout.scss */
-.wrapper {
-  -webkit-border-radius: 10px 10px;
-  -moz-border-radius: 10px / 10px;
-  -o-border-radius: 10px / 10px;
-  -ms-border-radius: 10px / 10px;
-  -khtml-border-radius: 10px / 10px;
-  border-radius: 10px / 10px;
-}
+.page { position: relative; z-index: 0; min-height: 100%; background-color: #d1d6c1; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD1D6C1', endColorstr='#FFEDEFE4'); background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d1d6c1), color-stop(40%, #edefe4), color-stop(100%, #edefe4)); background-image: -webkit-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: -moz-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: -o-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: -ms-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); }
+
+.page:before { content: ''; position: absolute; display: block; top: 0; bottom: auto; left: auto; right: auto; width: 100%; height: 66px; background: #880606; }
+
+.page:after { content: ''; position: absolute; display: block; top: auto; bottom: 0; left: auto; right: auto; width: 100%; height: 70px; background: #880606; }
+
+/* Main page layout blocks
+--------------------------------*/
+.page-header, .page-content, .page-footer { position: relative; z-index: 10; }

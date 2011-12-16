@@ -1,0 +1,23 @@
+$full: 100%;
+
+@mixin pseudo-abs(
+  $width: $full,
+  $height: $full,
+  $top : auto,
+  $bottom: auto,
+  $left : auto,
+  $right: auto
+  )
+{
+	content: '';
+	position:absolute;
+	display:block;
+
+	top: $top;
+	bottom: $bottom;
+	left: $left;
+	right: $right;
+
+	width: $width;
+	height: $height;
+}

@@ -1,10 +1,31 @@
-body {
-	// needs latest Compass, add '@import "compass"' to your scss
-	background-color: #1e5799; // Old browsers
-	@include filter-gradient(#1e5799, #7db9e8, vertical); // IE6-9
-	@include background-image(linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%));
+/* Base layout
+--------------------------------*/
+html, body {
+	height:100%;
 }
 
-.wrapper {
-	@include border-radius(10px, 10px);
+.page {
+	position:relative;
+  z-index:0;
+  min-height:100%;
+	background-color: #d1d6c1;
+	@include filter-gradient(#d1d6c1, #edefe4, vertical);
+	@include background-image(linear-gradient(top,  #d1d6c1 0%,#edefe4 40%,#edefe4 100%));
+}
+
+.page:before {
+  @include pseudo-abs(100%, 66px, 0, auto); //top: 0
+	background:#880606;
+}
+
+.page:after {
+	@include pseudo-abs(100%, 70px, auto, 0); //bottom: 0
+	background:#880606;
+}
+
+/* Main page layout blocks
+--------------------------------*/
+.page-header, .page-content, .page-footer {
+	position:relative;
+	z-index:10;
 }
