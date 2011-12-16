@@ -1,0 +1,38 @@
+/* Header styles
+--------------------------------*/
+
+/* header nav
+--------------------------------*/
+.header-nav {
+	text-align:justify;
+	height:58px;
+}
+
+.header-nav li {
+	display:inline-block;
+	text-align:left;
+}
+
+.nav-item-sizer {
+	width:100%;
+}
+
+.header-nav a {
+	color: $cwhite;
+}
+
+/* header intro
+--------------------------------*/
+$intro-shadow: 40px;
+.header-intro {
+  position:relative;
+	width:920px;
+	height:200px;
+	background:#D5D5D5;
+	margin-bottom:$intro-shadow;
+}
+
+.header-intro:after {
+	@include pseudo-abs(100%, $intro-shadow, auto, -30px);
+	background:#efefaa;
+}

@@ -29,3 +29,8 @@ html, body {
 	position:relative;
 	z-index:10;
 }
+
+.page-header, .page-content {
+  width:$page-width - $page-padding * 2;
+	margin:0 auto;
+}
