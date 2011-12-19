@@ -3,3 +3,9 @@
 .cf:after { clear: both; }
 /* For IE 6/7 (trigger hasLayout) */
 .cf { zoom: 1; }
+
+.b-exude-border {
+	padding:15px 20px;
+	border:3px dotted #4A8F19;
+	@include box-sizing(border-box);
+}
