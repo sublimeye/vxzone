@@ -56,6 +56,10 @@ $intro-shadow: 40px;
 
 /* header search section
 --------------------------------*/
+.header-search-section {
+	margin-bottom:30px;
+}
+
 .search {
   $w: 600px;
   $lrpadding: 20px;
@@ -94,7 +98,9 @@ $intro-shadow: 40px;
 	border-left-color:#B0AFAF;
   @include box-sizing(border-box);
 
-	background-color: red;
+	background-color: #e0e0e0;
+	@include filter-gradient(#e0e0e0, #ffffff, vertical);
+	@include background-image(linear-gradient(top,  #e0e0e0 0%,#ffffff 10%));
 }
 
 .search-filter {
@@ -128,3 +134,18 @@ $intro-shadow: 40px;
 	float:right;
 	width:280px;
 }
+
+.promo {
+  margin-bottom:30px;
+	padding:15px 0;
+	background:#FFF;
+	border-width:1px;
+	border-style:solid;
+	border-top-color:#81886B;
+	border-right-color:#B3B7A7;
+	border-bottom-color:#D9DBD3;
+	border-left-color:#B3B7A7;
+	@include single-box-shadow(#B3B7A7, -1px, 2px, 3px, 0px, inset);
+	text-align:center;
+}
+

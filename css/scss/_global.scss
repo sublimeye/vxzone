@@ -9,3 +9,7 @@
 	border:3px dotted #4A8F19;
 	@include box-sizing(border-box);
 }
+
+.g-pointer {
+	cursor:pointer;
+}
