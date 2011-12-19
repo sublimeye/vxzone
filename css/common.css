@@ -1,3 +1,7 @@
+/* sass
+--------------------------------*/
+/* global
+--------------------------------*/
 /* line 14, scss/_reset.scss */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, input, textarea, keygen, select, button, isindex { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
 
@@ -20,30 +24,74 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 /* line 29, scss/_reset.scss */
 table { border-collapse: collapse; border-spacing: 0; }
 
+/* temporary block for switcher items
+--------------------------------*/
+/* line 3, scss/_global.scss */
+.switcher-item { display: none; }
+
+/* line 7, scss/_global.scss */
+.switcher-item[data-sitem="1"] { display: block; }
+
 /* CLEAR FIX*/
-/* line 2, scss/_global.scss */
+/* line 12, scss/_global.scss */
 .cf:before, .cf:after { content: ""; display: table; }
 
-/* line 3, scss/_global.scss */
+/* line 13, scss/_global.scss */
 .cf:after { clear: both; }
 
 /* For IE 6/7 (trigger hasLayout) */
-/* line 5, scss/_global.scss */
+/* line 15, scss/_global.scss */
 .cf { zoom: 1; }
 
-/* line 7, scss/_global.scss */
-.b-exude-border { padding: 15px 20px; border: 3px dotted #4A8F19; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
-
-/* line 13, scss/_global.scss */
+/* helpers
+--------------------------------*/
+/* line 19, scss/_global.scss */
 .g-pointer { cursor: pointer; }
 
+/* blocks
+--------------------------------*/
+/* line 25, scss/_global.scss */
+.b-exude-border { padding: 15px 20px; border: 3px dotted #4A8F19; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
+
+/* line 32, scss/_global.scss */
+.b-exude-rounded_sh { position: relative; background: #EDEFE4; border-top: 1px solid #999D89; -moz-border-radius: 10px; -webkit-border-radius: 10px; -o-border-radius: 10px; -ms-border-radius: 10px; -khtml-border-radius: 10px; border-radius: 10px; margin-bottom: 20px; }
+
+/* line 40, scss/_global.scss */
+.b-exude-rounded_sh:after { background: #999B8D; content: ''; position: absolute; display: block; top: auto; bottom: -20px; left: auto; right: auto; width: 100%; height: 20px; z-index: -1; }
+
+/* shadowed light
+--------------------------------*/
+/* line 48, scss/_global.scss */
+.b-exude-shadowed-light { position: relative; background: #fff; padding-top: 20px; margin-bottom: 20px; }
+
+/* line 55, scss/_global.scss */
+.b-exude-shadowed-light:before { background: red; content: ''; position: absolute; display: block; top: 0; bottom: auto; left: auto; right: auto; width: 100%; height: 20px; z-index: -1; z-index: 1; }
+
+/* line 61, scss/_global.scss */
+.b-exude-shadowed-light:after { background: red; content: ''; position: absolute; display: block; top: auto; bottom: -20px; left: auto; right: auto; width: 100%; height: 20px; z-index: -1; z-index: 1; }
+
+/* columns blocks
+--------------------------------*/
+/* line 69, scss/_global.scss */
+.eq_columns li { float: left; }
+
+/* line 73, scss/_global.scss */
+.eq_columns--six li { width: 120px; margin-left: 40px; }
+
+/* line 78, scss/_global.scss */
+.eq_columns--six li:first-child { margin-left: 0; }
+
+/*
+--------------------------------*/
+/* global page styles
+--------------------------------*/
 /* Base layout
 --------------------------------*/
 /* line 3, scss/_layout.scss */
 html, body { height: 100%; }
 
 /* line 7, scss/_layout.scss */
-.page { position: relative; z-index: 0; min-height: 100%; background-color: #d1d6c1; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD1D6C1', endColorstr='#FFEDEFE4'); background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d1d6c1), color-stop(40%, #edefe4), color-stop(100%, #edefe4)); background-image: -webkit-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: -moz-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: -o-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: -ms-linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); background-image: linear-gradient(top, #d1d6c1 0%, #edefe4 40%, #edefe4 100%); }
+.page { position: relative; z-index: 0; min-height: 100%; background-color: #d1d6c1; *zoom: 1; filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFD1D6C1', endColorstr='#FFEDEFE4'); background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d1d6c1), color-stop(40%, #d1d6c1), color-stop(100%, #edefe4)); background-image: -webkit-linear-gradient(top, #d1d6c1 0%, #d1d6c1 40%, #edefe4 100%); background-image: -moz-linear-gradient(top, #d1d6c1 0%, #d1d6c1 40%, #edefe4 100%); background-image: -o-linear-gradient(top, #d1d6c1 0%, #d1d6c1 40%, #edefe4 100%); background-image: -ms-linear-gradient(top, #d1d6c1 0%, #d1d6c1 40%, #edefe4 100%); background-image: linear-gradient(top, #d1d6c1 0%, #d1d6c1 40%, #edefe4 100%); }
 
 /* line 16, scss/_layout.scss */
 .page:before { content: ''; position: absolute; display: block; top: 0; bottom: auto; left: auto; right: auto; width: 100%; height: 66px; z-index: -1; background: #880606; }
@@ -129,8 +177,26 @@ html, body { height: 100%; }
 /* line 138, scss/_header.scss */
 .promo { margin-bottom: 30px; padding: 15px 0; background: #FFF; border-width: 1px; border-style: solid; border-top-color: #81886B; border-right-color: #B3B7A7; border-bottom-color: #D9DBD3; border-left-color: #B3B7A7; -moz-box-shadow: inset -1px 2px 3px 0px #b3b7a7; -webkit-box-shadow: inset -1px 2px 3px 0px #b3b7a7; -o-box-shadow: inset -1px 2px 3px 0px #b3b7a7; box-shadow: inset -1px 2px 3px 0px #b3b7a7; text-align: center; }
 
-/* line 1, scss/_index_page/_equal-height.scss */
-.hot-interesting, .hot-forum { float: left; width: 440px; }
+/* page styles
+--------------------------------*/
+/* line 3, scss/_index_page/_equal-height.scss */
+.hot-interesting { /*float:left;*/ /*width:$eqwidth;*/ }
 
-/* line 6, scss/_index_page/_equal-height.scss */
-.hot-forum { float: right; }
+/* line 8, scss/_index_page/_equal-height.scss */
+.hot-forum { /*float:right;*/ /*width:$eqwidth;*/ }
+
+/* line 16, scss/_index_page/_equal-height.scss */
+.equal-height-wrapper { position: relative; width: 440px; left: 0px; margin: 0; }
+
+/* line 23, scss/_index_page/_equal-height.scss */
+.equal-height-wrapper-inner { width: 440px; margin-right: -100%; position: relative; left: 100%; margin-left: 40px; margin: 0px -100% 0px 40px; }
+
+/* HOT Interesting
+--------------------------------*/
+/* line 34, scss/_index_page/_equal-height.scss */
+.hot-interesting { position: relative; float: left; padding: 0 20px; width: 400px; margin-right: -440px; margin-top: 0px; margin-left: 0px; left: -500px; }
+
+/* HOT Forum
+--------------------------------*/
+/* hot offers block
+--------------------------------*/

@@ -1,8 +1,49 @@
-.hot-interesting, .hot-forum {
-	float:left;
-	width:440px;
+$eqwidth: 440px;
+
+.hot-interesting {
+	/*float:left;*/
+	/*width:$eqwidth;*/
 }
 
 .hot-forum {
-	float:right;
+	/*float:right;*/
+  /*width:$eqwidth;*/
+}
+
+.equal-height-wrapper {
+}
+
+.equal-height-wrapper {
+	position:relative;
+	width:440px;
+	left:0px;
+	margin:0;
+}
+
+.equal-height-wrapper-inner {
+	width:440px;
+	margin-right:-100%;
+	position:relative;
+	left: 100%;
+	margin-left: 40px;
+	margin:0px -100% 0px 40px;
+}
+
+/* HOT Interesting
+--------------------------------*/
+.hot-interesting {
+	position:relative;
+	float:left;
+	padding:0 20px;
+	width:400px;
+	margin-right:-440px;
+	margin-top:0px;
+	margin-left:0px;
+	left:-500px;
+}
+
+/* HOT Forum
+--------------------------------*/
+.hot-forum {
+
 }

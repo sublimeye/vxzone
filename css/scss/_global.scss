@@ -1,15 +1,83 @@
+/* temporary block for switcher items
+--------------------------------*/
+.switcher-item {
+	display:none;
+}
+
+.switcher-item[data-sitem="1"] {
+	display:block;
+}
+
 /* CLEAR FIX*/
 .cf:before, .cf:after { content: ""; display: table; }
 .cf:after { clear: both; }
 /* For IE 6/7 (trigger hasLayout) */
 .cf { zoom: 1; }
 
+/* helpers
+--------------------------------*/
+.g-pointer {
+	cursor:pointer;
+}
+
+/* blocks
+--------------------------------*/
 .b-exude-border {
 	padding:15px 20px;
 	border:3px dotted #4A8F19;
 	@include box-sizing(border-box);
 }
 
-.g-pointer {
-	cursor:pointer;
+$bex_shadow: 20px;
+.b-exude-rounded_sh {
+  position:relative;
+	background:#EDEFE4;
+	border-top:1px solid #999D89;
+	@include border-radius(10px);
+	margin-bottom:20px;
 }
+
+.b-exude-rounded_sh:after {
+  background:#999B8D;
+	@include pseudo-abs(100%, $bex_shadow, auto, -20px); //top: 0
+}
+
+/* shadowed light
+--------------------------------*/
+$shadowed_light_height: 20px;
+.b-exude-shadowed-light {
+  position:relative;
+	background:#fff;
+	padding-top:$shadowed_light_height;
+	margin-bottom:$shadowed_light_height;
+}
+
+.b-exude-shadowed-light:before {
+  background:red;
+	@include pseudo-abs(100%, $shadowed_light_height, 0, auto);
+	z-index:1;
+}
+
+.b-exude-shadowed-light:after {
+  background:red;
+	@include pseudo-abs(100%, $shadowed_light_height, auto, -$shadowed_light_height);
+	z-index:1;
+}
+
+/* columns blocks
+--------------------------------*/
+.eq_columns li {
+	float:left;
+}
+
+.eq_columns--six li {
+  width:120px;
+  margin-left:40px;
+}
+
+.eq_columns--six li:first-child {
+  margin-left:0;
+}
+
+/*
+--------------------------------*/

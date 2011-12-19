@@ -10,7 +10,7 @@ html, body {
   min-height:100%;
 	background-color: #d1d6c1;
 	@include filter-gradient(#d1d6c1, #edefe4, vertical);
-	@include background-image(linear-gradient(top,  #d1d6c1 0%,#edefe4 40%,#edefe4 100%));
+	@include background-image(linear-gradient(top,  #d1d6c1 0%,#d1d6c1 40%,#edefe4 100%));
 }
 
 .page:before {
