@@ -18,19 +18,60 @@ html, body {
 	background:#880606;
 }
 
-.page:after {
-	@include pseudo-abs(100%, 70px, auto, 0); //bottom: 0
-	background:#880606;
-}
-
 /* Main page layout blocks
 --------------------------------*/
 .page-header, .page-content, .page-footer {
 	position:relative;
 	z-index:10;
+	@extend .cf;
 }
 
 .page-header, .page-content {
   width:$page-width - $page-padding * 2;
 	margin:0 auto;
+}
+
+.page-content-column {
+  float:left;
+	width:600px;
+}
+
+.page-sidebar {
+  float:right;
+	width:280px;
+}
+
+$page-footer-shadow: 20px;
+.page-footer {
+  border-top:1px solid #B3B7A4;
+	background:#D1D6C1;
+	padding-top:$page-footer-shadow;
+}
+
+.page-footer:before {
+	@include pseudo-abs(100%, $page-footer-shadow, 0);
+	background:red;
+}
+
+.page-footer:after {
+	@include pseudo-abs(100%, 70px, auto, 0); //bottom: 0
+	background:#880606;
+}
+
+.page-footer-wrapper {
+  position:relative;
+	width:$page-width - $page-padding * 2;
+	margin:0 auto;
+}
+
+/* articles/ column-pages
+--------------------------------*/
+.page-column {
+	float:left;
+	width:600px;
+}
+
+.page-sidebar {
+	float:right;
+	width:280px;
 }

@@ -1,0 +1,15 @@
+.resources-list li {
+	@include font-serif(12px);
+	margin-bottom:10px;
+}
+
+.resources-list .details {
+  @include font-sans(11px);
+  display:block;
+  margin-top:5px;
+}
+
+.resources-list-inline .details {
+	display:inline-block;
+}
+

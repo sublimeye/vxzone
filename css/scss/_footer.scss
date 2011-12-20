@@ -1,0 +1,54 @@
+.footer-nav .eq_columns li {
+	margin-bottom:0;
+}
+
+.footer-nav .eq_columns--six {
+  margin-bottom:40px;
+}
+
+.footer-nav .title {
+	margin-bottom:10px;
+}
+
+.footer-nav .title a {
+	@include font-serif(12px, $c-link-red);
+}
+
+.footer-nav .subtitles {
+	@extend .cf;
+	margin-bottom:20px;
+}
+
+.footer-nav .subtitles a {
+	font-size: 11px;
+  float:left;
+  clear:left;
+	color:#2E2F2A !important;
+	margin-bottom:5px;
+}
+
+/* copyright
+--------------------------------*/
+.counters {
+	width:640px;
+	height:70px;
+}
+
+.footnote {
+	position:absolute;
+	right:0px;
+	bottom:20px;
+	width:280px;
+}
+.contact-us {
+	color:#fff;
+}
+
+.contact-us a {
+	color:#fff;
+}
+
+.copy {
+  @include font-sans(11px, #CF9D9D);
+}
+

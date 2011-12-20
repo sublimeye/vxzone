@@ -1,32 +1,22 @@
 $eqwidth: 440px;
-
-.hot-interesting {
-	/*float:left;*/
-	/*width:$eqwidth;*/
-}
-
-.hot-forum {
-	/*float:right;*/
-  /*width:$eqwidth;*/
-}
-
-.equal-height-wrapper {
-}
+$heading-offset: 50px;
 
 .equal-height-wrapper {
 	position:relative;
-	width:440px;
+	width:400px;
 	left:0px;
-	margin:0;
+	margin:$heading-offset 0 0;
 }
 
 .equal-height-wrapper-inner {
 	width:440px;
-	margin-right:-100%;
 	position:relative;
 	left: 100%;
-	margin-left: 40px;
-	margin:0px -100% 0px 40px;
+	margin:0px -100% 0px 60px;
+}
+
+.equal-height-wrapper .switcher-item {
+	margin-top:35px;
 }
 
 /* HOT Interesting
@@ -34,16 +24,30 @@ $eqwidth: 440px;
 .hot-interesting {
 	position:relative;
 	float:left;
-	padding:0 20px;
 	width:400px;
 	margin-right:-440px;
-	margin-top:0px;
 	margin-left:0px;
-	left:-500px;
+	left:-480px;
+}
+
+.hot-interesting > h2, .hot-forum > h2 {
+	margin:-$heading-offset 0 30px;
+}
+
+.hot-interesting-list dd {
+  margin-bottom:10px;
 }
 
 /* HOT Forum
 --------------------------------*/
-.hot-forum {
+.hot-forum .switcher-list {
+	top:15px;
+}
 
+.hot-forum-list li {
+	margin-bottom:10px;
+}
+
+.hot-forum-list span {
+	@include font-sans(11px);
 }

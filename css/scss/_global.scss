@@ -1,11 +1,48 @@
 /* temporary block for switcher items
 --------------------------------*/
+.switcher {
+	@extend .cf;
+}
+
 .switcher-item {
 	display:none;
 }
 
 .switcher-item[data-sitem="1"] {
 	display:block;
+}
+
+.switcher-list {
+  position:absolute;
+  top:0;
+  right:0;
+  overflow:hidden;
+  padding:0 0 5px;
+}
+
+.switcher-list li {
+	@include font-sans(11px, $c-link-red);
+	float:left;
+	padding:2px 8px;
+	margin:0 4px;
+}
+
+.switcher-list .active {
+	background:#AE0C0C;
+	@include single-box-shadow($cwhite, 0, 1px, 0px, 0px);
+	@include border-radius(10px);
+}
+
+.switcher-list li a {
+  text-decoration:none;
+  color:$c-link-red;
+	border-bottom:1px dashed $c-link-red;
+	line-height:1;
+}
+
+.switcher-list .active a {
+  color:$cwhite;
+	border-bottom:none;
 }
 
 /* CLEAR FIX*/
@@ -23,6 +60,7 @@
 /* blocks
 --------------------------------*/
 .b-exude-border {
+  position:relative;
 	padding:15px 20px;
 	border:3px dotted #4A8F19;
 	@include box-sizing(border-box);
@@ -31,15 +69,16 @@
 $bex_shadow: 20px;
 .b-exude-rounded_sh {
   position:relative;
+  padding:0 20px;
 	background:#EDEFE4;
 	border-top:1px solid #999D89;
 	@include border-radius(10px);
-	margin-bottom:20px;
+	margin-bottom: $bex_shadow + 10px !important;
 }
 
 .b-exude-rounded_sh:after {
   background:#999B8D;
-	@include pseudo-abs(100%, $bex_shadow, auto, -20px); //top: 0
+	@include pseudo-abs(100%, $bex_shadow, auto, -20px, 0); //top: 0
 }
 
 /* shadowed light
@@ -47,37 +86,87 @@ $bex_shadow: 20px;
 $shadowed_light_height: 20px;
 .b-exude-shadowed-light {
   position:relative;
-	background:#fff;
+  margin:0 -40px;
+  padding:0 40px;
+	background:$cwhite;
 	padding-top:$shadowed_light_height;
 	margin-bottom:$shadowed_light_height;
 }
 
 .b-exude-shadowed-light:before {
   background:red;
-	@include pseudo-abs(100%, $shadowed_light_height, 0, auto);
+	@include pseudo-abs(100%, $shadowed_light_height, 0, auto, 0);
 	z-index:1;
 }
 
 .b-exude-shadowed-light:after {
   background:red;
-	@include pseudo-abs(100%, $shadowed_light_height, auto, -$shadowed_light_height);
+	@include pseudo-abs(100%, $shadowed_light_height, auto, -$shadowed_light_height, 0);
 	z-index:1;
 }
 
 /* columns blocks
 --------------------------------*/
+.eq_columns {
+	@extend .cf;
+}
+
 .eq_columns li {
 	float:left;
+	margin-bottom:40px;
+}
+
+.eq_columns .title {
+	margin-bottom:10px;
+}
+
+.eq_columns .details {
+	@include font-sans(11px);
+}
+
+.eq_columns--three {
+	margin:0 -12px;
+}
+
+.eq_columns--four {
+	margin:0 -10px;
+}
+
+.eq_columns--six {
+	margin:0 -20px;
+}
+
+.eq_columns--three li {
+  width:290px;
+  margin-left:12px;
+  margin-right:12px;
+}
+
+.eq_columns--four li {
+	width:210px;
+	margin-left:10px;
+	margin-right:10px;
 }
 
 .eq_columns--six li {
   width:120px;
-  margin-left:40px;
+  margin-left:20px;
+  margin-right:20px;
 }
 
-.eq_columns--six li:first-child {
-  margin-left:0;
+.eq_columns figure img {
+  display:block;
+  @include single-box-shadow(#C9CEB8, 0, 0, 5px, 3px);
 }
 
-/*
+
+/* breadcrumbs
 --------------------------------*/
+.breadcrumbs {
+	@extend .cf;
+	margin-bottom:15px;
+}
+
+.breadcrumbs li {
+	float:left;
+}

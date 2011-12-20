@@ -23,3 +23,13 @@ $full: 100%;
 
 	z-index:-1;
 }
+
+@mixin font-sans($fz: 11px, $color: #000) {
+	font: $fz Arial, Helvetica, sans-serif;
+	color:$color;
+}
+
+@mixin font-serif($fz: 12px, $color:#000) {
+	font: $fz Georgia, "Times New Roman", serif;
+	color:$color;
+}
