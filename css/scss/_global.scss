@@ -89,7 +89,7 @@ $bex_shadow: 15px;
 	&:after {
 		background:url("../img/bg_exude_rounded_shadow.png") no-repeat;
 		@include pseudo-abs(100%, $bex_shadow, auto, -$bex_shadow, 50%, 0); //top: 0
-		margin-left:-213	px;
+		margin-left:-213px;
 	}
 }
 
