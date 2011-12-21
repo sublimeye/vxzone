@@ -14,7 +14,7 @@
 
 .switcher-list {
   position:absolute;
-  top:0;
+  top:4px;
   right:0;
   overflow:hidden;
   padding:0 0 5px;
@@ -118,6 +118,21 @@ $shadowed_light_height: 25px;
 	z-index:1;
 }
 
+.b-exude-light {
+  $incut-shadow-height: 17px;
+  position:relative;
+  margin-bottom:25px;
+  padding:25px 10px;
+  background:#fff;
+  line-height:1.7 !important;
+
+	&:before {
+	  @include pseudo-abs(100%, $incut-shadow-height, 0, auto, 0); //top: 0
+		background:url("../img/bg_incut_shadow.png");
+		z-index:1;
+	}
+}
+
 /* columns blocks
 --------------------------------*/
 .eq_columns {
@@ -138,10 +153,9 @@ $shadowed_light_height: 25px;
 	}
 
 	& figure {
-		margin-bottom:15px;
+		margin-bottom:10px;
 
 		& img {
-			display:block;
 			@include single-box-shadow(#C9CEB8, 0, 0, 5px, 3px);
 		}
 	}
@@ -153,6 +167,16 @@ $shadowed_light_height: 25px;
 
 	& li {
 		width:290px;
+		margin-left:12px;
+		margin-right:12px;
+	}
+}
+
+.eq_columns--three_short {
+	margin:0 -12px;
+
+	& li {
+		width:182px;
 		margin-left:12px;
 		margin-right:12px;
 	}

@@ -256,7 +256,7 @@ table {
   color: black; }
 /* line 155, scss/_global.scss */
 .eq_columns figure {
-  margin-bottom: 10px; }
+  margin-bottom: 15px; }
   /* line 158, scss/_global.scss */
   .eq_columns figure img {
     -moz-box-shadow: 0 0 5px 3px #c9ceb8;
@@ -269,36 +269,27 @@ table {
   margin: 0 -12px; }
   /* line 168, scss/_global.scss */
   .eq_columns--three li {
-    width: 290px;
-    margin-left: 12px;
-    margin-right: 12px; }
-
-/* line 175, scss/_global.scss */
-.eq_columns--three_short {
-  margin: 0 -12px; }
-  /* line 178, scss/_global.scss */
-  .eq_columns--three_short li {
     width: 182px;
     margin-left: 12px;
     margin-right: 12px; }
 
-/* line 185, scss/_global.scss */
+/* line 175, scss/_global.scss */
 .eq_columns--four {
   margin: 0 -10px; }
-  /* line 188, scss/_global.scss */
+  /* line 178, scss/_global.scss */
   .eq_columns--four li {
     width: 210px;
     margin-left: 10px;
     margin-right: 10px; }
-  /* line 194, scss/_global.scss */
+  /* line 184, scss/_global.scss */
   .eq_columns--four li:nth-child(4n - 2) {
     width: 210px;
     margin-right: 30px; }
 
-/* line 200, scss/_global.scss */
+/* line 190, scss/_global.scss */
 .eq_columns--six {
   margin: 0 -20px; }
-  /* line 203, scss/_global.scss */
+  /* line 193, scss/_global.scss */
   .eq_columns--six li {
     width: 120px;
     margin-left: 20px;
@@ -306,19 +297,19 @@ table {
 
 /* breadcrumbs
 --------------------------------*/
-/* line 213, scss/_global.scss */
+/* line 203, scss/_global.scss */
 .breadcrumbs {
   margin-bottom: 15px; }
 
-/* line 218, scss/_global.scss */
+/* line 208, scss/_global.scss */
 .breadcrumbs li {
   float: left; }
 
-/* line 222, scss/_global.scss */
+/* line 212, scss/_global.scss */
 .breadcrumbs li a, .breadcrumbs li span {
   margin: 0 5px; }
 
-/* line 226, scss/_global.scss */
+/* line 216, scss/_global.scss */
 .breadcrumbs li:first-child a {
   margin-left: 0; }
 
@@ -1027,15 +1018,10 @@ input[type="text"], textarea {
   box-shadow: inset -1px 1px 2px 1px #e0e0e0; }
 
 /* line 14, scss/_ui.scss */
-textarea {
-  width: 100%;
-  height: 95px; }
-
-/* line 19, scss/_ui.scss */
 input[type="text"] {
   padding: 2px 5px; }
 
-/* line 23, scss/_ui.scss */
+/* line 18, scss/_ui.scss */
 .btn {
   display: inline-block;
   border: 1px solid #646464;
@@ -1057,7 +1043,7 @@ input[type="text"] {
   background-image: linear-gradient(top, #ffffff 0%, #e2e2e2 100%);
   text-align: center;
   text-decoration: none; }
-  /* line 34, scss/_ui.scss */
+  /* line 29, scss/_ui.scss */
   .btn:hover {
     background-color: white;
     *zoom: 1;
@@ -1068,7 +1054,7 @@ input[type="text"] {
     background-image: -o-linear-gradient(top, #ffffff 0%, #efefef 100%);
     background-image: -ms-linear-gradient(top, #ffffff 0%, #efefef 100%);
     background-image: linear-gradient(top, #ffffff 0%, #efefef 100%); }
-  /* line 40, scss/_ui.scss */
+  /* line 35, scss/_ui.scss */
   .btn:active {
     background-color: white;
     *zoom: 1;
@@ -1080,7 +1066,7 @@ input[type="text"] {
     background-image: -ms-linear-gradient(top, #ffffff 0%, #d8d8d8 100%);
     background-image: linear-gradient(top, #ffffff 0%, #d8d8d8 100%); }
 
-/* line 47, scss/_ui.scss */
+/* line 42, scss/_ui.scss */
 button {
   border: 1px solid #646464;
   font: 14px Arial, Helvetica, sans-serif;
@@ -1101,7 +1087,7 @@ button {
   background-image: -o-linear-gradient(top, #ffffff 0%, #e2e2e2 100%);
   background-image: -ms-linear-gradient(top, #ffffff 0%, #e2e2e2 100%);
   background-image: linear-gradient(top, #ffffff 0%, #e2e2e2 100%); }
-  /* line 56, scss/_ui.scss */
+  /* line 51, scss/_ui.scss */
   button:hover {
     background-color: white;
     *zoom: 1;
@@ -1112,7 +1098,7 @@ button {
     background-image: -o-linear-gradient(top, #ffffff 0%, #efefef 100%);
     background-image: -ms-linear-gradient(top, #ffffff 0%, #efefef 100%);
     background-image: linear-gradient(top, #ffffff 0%, #efefef 100%); }
-  /* line 62, scss/_ui.scss */
+  /* line 57, scss/_ui.scss */
   button:active {
     background-color: white;
     *zoom: 1;
@@ -1419,68 +1405,39 @@ button {
   position: relative; }
 
 /* line 95, scss/_article_page/_article_page.scss */
-.comments-list-container {
-  margin-bottom: 50px; }
-
-/* line 99, scss/_article_page/_article_page.scss */
 .comments-amount {
   font: 14px Arial, Helvetica, sans-serif;
   color: black; }
 
 /* post comments form
 --------------------------------*/
-/* line 105, scss/_article_page/_article_page.scss */
-.post-comment-form {
-  margin: 15px 0; }
-  /* line 108, scss/_article_page/_article_page.scss */
-  .post-comment-form .form-line {
-    margin-bottom: 8px; }
+/* line 102, scss/_article_page/_article_page.scss */
+.post-comment-form .form-line {
+  margin-bottom: 10px; }
 
-/* line 113, scss/_article_page/_article_page.scss */
-.post-new-comment {
-  margin-top: 25px;
-  margin-bottom: 25px; }
-
-/* line 118, scss/_article_page/_article_page.scss */
+/* line 107, scss/_article_page/_article_page.scss */
 .comment-item {
-  border-top: 1px solid #9BBF7F;
-  padding-top: 12px; }
-  /* line 122, scss/_article_page/_article_page.scss */
+  border-top: 1px solid #9BBF7F; }
+  /* line 110, scss/_article_page/_article_page.scss */
   .comment-item header {
     margin-bottom: 10px; }
-  /* line 126, scss/_article_page/_article_page.scss */
+  /* line 114, scss/_article_page/_article_page.scss */
   .comment-item footer {
-    margin-top: 5px;
-    margin-bottom: 12px; }
-  /* line 131, scss/_article_page/_article_page.scss */
+    margin-top: 5px; }
+  /* line 118, scss/_article_page/_article_page.scss */
   .comment-item time {
     font: 11px Arial, Helvetica, sans-serif;
     color: black; }
-  /* line 135, scss/_article_page/_article_page.scss */
+  /* line 122, scss/_article_page/_article_page.scss */
   .comment-item .comment-user_name {
     font: 16px Georgia, "Times New Roman", serif;
     color: #3f7f12; }
-  /* line 139, scss/_article_page/_article_page.scss */
-  .comment-item .comment-body p {
-    line-height: 1.6 !important; }
-  /* line 143, scss/_article_page/_article_page.scss */
+  /* line 126, scss/_article_page/_article_page.scss */
   .comment-item .comment-item {
     padding-left: 30px; }
-    /* line 145, scss/_article_page/_article_page.scss */
-    .comment-item .comment-item .comment-item {
-      padding-left: 30px; }
-      /* line 147, scss/_article_page/_article_page.scss */
-      .comment-item .comment-item .comment-item .comment-item {
-        padding-left: 28px; }
-        /* line 149, scss/_article_page/_article_page.scss */
-        .comment-item .comment-item .comment-item .comment-item .comment-item {
-          padding-left: 25px; }
-          /* line 151, scss/_article_page/_article_page.scss */
-          .comment-item .comment-item .comment-item .comment-item .comment-item .comment-item {
-            padding-left: 22px; }
-            /* line 153, scss/_article_page/_article_page.scss */
-            .comment-item .comment-item .comment-item .comment-item .comment-item .comment-item .comment-item {
-              padding-left: 18px; }
+  /* line 129, scss/_article_page/_article_page.scss */
+  .comment-item .comment-item {
+    padding-left: 30px; }
 
 /* addon styles (different css for joomla editor implementation)
 --------------------------------*/

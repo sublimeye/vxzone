@@ -1,25 +1,41 @@
 /* header nav
 --------------------------------*/
 .header-nav {
+  $top-offset: 20px;
 	text-align:justify;
 	height:58px;
-}
 
-.header-nav li {
-	display:inline-block;
-	text-align:left;margin-top: 20px;
-	@include font-sans(12px);
+	& li {
+		display:inline-block;
+		text-align:left;
+		margin-top: $top-offset;
+		@include font-sans(12px, #fff);
+	}
+
+	& a {
+		color: $cwhite;
+		&:hover {
+			color:#F2E121;
+		}
+	}
+
+	.active {
+	  position:relative;
+		color:#f2e123;
+
+		&:before {
+		  $padding: 10px;
+			@include pseudo-abs(100%, 60px, -$top-offset, auto, -$padding);
+			padding:0 $padding;
+			background-color: #D00E0E;
+			@include filter-gradient(#D00E0E, #880A0A, vertical);
+			@include background-image(linear-gradient(top, #D00E0E 0%, #880A0A 100%));
+		}
+	}
 }
 
 .nav-item-sizer {
 	width:100%;
-}
-
-.header-nav a {
-	color: $cwhite;
-}
-.header-nav a:hover {
-	color:#F2E121;
 }
 
 /* header intro
@@ -168,6 +184,7 @@ $intro-shadow: 44px;
 }
 
 .promo {
+  clear:both;
   margin-bottom:30px;
 	padding:15px 0 12px 0;
 	background:#FFF;

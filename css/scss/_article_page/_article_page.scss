@@ -1,0 +1,162 @@
+.content {
+  & header {
+		margin-bottom:10px;
+  }
+  
+	& header time {
+		display:inline-block;
+		margin:0 25px 20px 0;
+		@include font-sans(11px);
+	}
+}
+
+.article-details {
+
+}
+
+.article-tags {
+	color:#52544d;
+	margin-bottom:35px;
+}
+
+.content .article-author {
+	margin-bottom:0;
+}
+
+.article-actions {
+	margin-bottom:35px;
+
+	& .rating {
+	  float:left;
+	  margin-right:50px;
+	  position:relative;
+	  display:inline-block;
+		background:#4A8F1A;
+		@include font-sans(18px, #fff);
+
+		& .btn-counter {
+			width:28px;
+			height:23px;
+		}
+
+		& .rating-data {
+			display:inline-block;
+			margin:0 15px;
+		}
+
+	}
+
+	& .views {
+		float:left;
+		@include font-sans(16px);
+
+		& span {
+			color:#3f7f12;
+		}
+	}
+
+	& .share {
+		float:right;
+	}
+}
+
+.article-discuss {
+	@include font-serif(16px);
+	margin-bottom:25px;
+	text-align:center;
+	& a {
+		color:$c-link !important;
+	}
+}
+
+.article-navigation {
+$article-width: 280px;
+$article-padding: 25px;
+
+	& .prev-article {
+	  float:left;
+	  display:block;
+	  padding-left:$article-padding;
+	  width:$article-width - $article-padding;
+  	position:relative;
+
+	}
+
+	& .next-article {
+	  float:right;
+	  display:block;
+	 	padding-right:$article-padding;
+	  width:$article-width - $article-padding;
+	  position:relative;
+
+	}
+}
+
+.comments-list-container {
+  margin-bottom:50px;
+}
+
+.comments-amount {
+	@include font-sans(14px);
+}
+
+/* post comments form
+--------------------------------*/
+.post-comment-form {
+  margin:15px 0;
+
+	.form-line {
+		margin-bottom:8px;
+	}
+}
+
+.post-new-comment {
+  margin-top:25px;
+  margin-bottom:25px;
+}
+
+.comment-item {
+	border-top:1px solid #9BBF7F;
+	padding-top:12px;
+
+	header {
+		margin-bottom:10px;
+	}
+
+	footer {
+		margin-top:5px;
+		margin-bottom:12px;
+	}
+
+  time {
+		@include font-sans(11px);
+  }
+
+	& .comment-user_name {
+		@include font-serif(16px, #3f7f12);
+	}
+
+  & .comment-body p {
+    line-height:1.6 !important;
+  }
+
+	& .comment-item {
+		padding-left: 30px;
+		& .comment-item {
+			padding-left: 30px;
+			& .comment-item {
+				padding-left: 28px;
+				& .comment-item {
+					padding-left: 25px;
+					& .comment-item {
+						padding-left: 22px;
+						& .comment-item {
+							padding-left: 18px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

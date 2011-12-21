@@ -15,19 +15,28 @@
 @import "_header.scss";
 @import "_footer.scss";
 @import "_sidebar.scss";
+@import "_icons.scss";
+@import "_ui.scss";
 
 /* page style overrides
 --------------------------------*/
 
-	/* index-page
-	--------------------------------*/
+/* index-page
+--------------------------------*/
 	@import "_index_page/_index_page.scss";
 
 		@import "_index_page/_equal-height.scss";
 		@import "_index_page/_b-exude-shadowed-light.scss";
 		@import "_index_page/_tags-list.scss";
 
-	/* error pages overwrite
-	--------------------------------*/
+/* error pages overwrite
+--------------------------------*/
 	@import "_error_page/_error_page.scss";
 
+/* article
+--------------------------------*/
+	@import "_article_page/_article_page.scss";
+
+/* addon styles (different css for joomla editor implementation)
+--------------------------------*/
+@import "addon.scss";
