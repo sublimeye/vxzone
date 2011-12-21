@@ -1,47 +1,75 @@
-.footer-nav .eq_columns li {
-	margin-bottom:0;
+.footer-nav {
+  margin-top:2px;
+  margin-bottom:30px;
+
+	& .eq_columns li {
+		margin-bottom:0;
+	}
+
+	& .eq_columns--three {
+		/*margin-bottom:6px;*/
+	}
+
+	& .eq_columns--six {
+		margin-bottom:30px;
+		@include font-serif(13px);
+	}
+
+	& .title {
+		margin-bottom:6px;
+	}
+
+	& .title--exude {
+		margin-bottom:23px;
+	}
+
+	& .title a {
+		@include font-serif(12px, $c-link);
+	}
+
+	& .subtitles {
+		@extend .cf;
+		margin-bottom:20px;
+	}
+
+	& .subtitles a {
+		@include font-sans(11px, #2E2F2A);
+		float:left;
+		clear:left;
+		margin-bottom:5px;
+		line-height:1.4;
+		color:#2E2F2A !important;
+	}
 }
 
-.footer-nav .eq_columns--six {
-  margin-bottom:40px;
-}
-
-.footer-nav .title {
-	margin-bottom:10px;
-}
-
-.footer-nav .title a {
-	@include font-serif(12px, $c-link-red);
-}
-
-.footer-nav .subtitles {
-	@extend .cf;
-	margin-bottom:20px;
-}
-
-.footer-nav .subtitles a {
-	font-size: 11px;
-  float:left;
-  clear:left;
-	color:#2E2F2A !important;
-	margin-bottom:5px;
-}
 
 /* copyright
 --------------------------------*/
 .counters {
 	width:640px;
 	height:70px;
+
+	& > div {
+		margin-top:19px;
+		float:left;
+		margin-left:30px;
+	}
+
+	& > div:first-child {
+		margin-left:0;
+	}
+
 }
 
 .footnote {
 	position:absolute;
 	right:0px;
-	bottom:20px;
+	bottom:17px;
 	width:280px;
 }
 .contact-us {
 	color:#fff;
+	margin-bottom:9px;
 }
 
 .contact-us a {

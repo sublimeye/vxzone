@@ -1,0 +1,25 @@
+/* customized headings
+--------------------------------*/
+.page-index {
+	& h2 {
+		@include font-serif(26px);
+		margin-bottom:40px;
+	}
+
+	& h3 {
+		@include font-serif(20px);
+		margin-bottom:16px;
+	}
+
+	& .promo {
+		margin-bottom:10px;
+	}
+}
+
+.hot-offers {
+	margin-top:35px;
+}
+
+.customer-helper h3 {
+	margin-bottom:35px;
+}

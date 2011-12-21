@@ -45,23 +45,25 @@ $page-footer-shadow: 20px;
 .page-footer {
   border-top:1px solid #B3B7A4;
 	background:#D1D6C1;
-	padding-top:$page-footer-shadow;
-}
+	margin-top:45px;
 
-.page-footer:before {
-	@include pseudo-abs(100%, $page-footer-shadow, 0);
-	background:red;
-}
-
-.page-footer:after {
-	@include pseudo-abs(100%, 70px, auto, 0); //bottom: 0
-	background:#880606;
+	&:after {
+		@include pseudo-abs(100%, 70px, auto, 0); //bottom: 0
+		background:#880606;
+	}
 }
 
 .page-footer-wrapper {
   position:relative;
 	width:$page-width - $page-padding * 2;
 	margin:0 auto;
+	padding-top:$page-footer-shadow;
+
+	&:before {
+		@include pseudo-abs(100%, $page-footer-shadow, -1px, auto, 50%);
+		background:url("../img/bg_exude_shadowed_light.png");
+		margin-left:-(917px / 2);
+	}
 }
 
 /* articles/ column-pages

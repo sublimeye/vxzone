@@ -1,17 +1,31 @@
+.b-exude-shadowed-light {
+	& h2 {
+		margin-bottom: 48px;
+	}
+}
+
 .eshop-reviews, .buy-reports, .customer-helper {
 	position:relative;
 }
 
 .report-item {
   @extend .cf;
-	margin-bottom:30px;
-}
+	margin-bottom:20px;
 
-.report-item header {
-  float:left;
-	width:110px;
-	margin-right:10px;
-	@include font-sans(11px);
+	& header {
+		float:left;
+		width:110px;
+		margin-right:10px;
+		@include font-sans(11px);
+		line-height:1.2;
+	}
+
+	& footer {
+		float:left;
+		width:260px;
+		@include font-sans(11px);
+		line-height:1.2;
+	}
 }
 
 $rc-width: 520px;
@@ -20,10 +34,6 @@ $rc-margin: 40px;
   float:left;
 	width:$rc-width - $rc-margin;
 	margin-right:$rc-margin;
-}
-
-.report-item footer {
-	float:left;
-	width:260px;
-	@include font-sans(11px);
+	margin-top:-.35em;
+	line-height:1.6em;
 }

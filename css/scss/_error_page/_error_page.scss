@@ -9,6 +9,11 @@
 		min-height:100%;
 		filter: none;
 		background: none;
+		padding-left:20px;
+	}
+
+	& header {
+		margin-left:-20px;
 	}
 
 	& .page:before {
@@ -24,8 +29,12 @@
 		position:relative;
 		width:920px;
 		height:auto;
-		margin:70px 0 100px;
+		margin:65px 0 140px;
 		background:none;
+	}
+
+	& .header-intro:before {
+		display:none;
 	}
 
 	& .header-intro:after {
@@ -33,12 +42,12 @@
 	}
 
 	& h1 {
-		@include font-serif(45px);
+		@include font-serif(48px);
 		margin-bottom:70px;
 	}
 
 	& footer {
-		margin-top:50px;
+		margin-top:60px;
 	}
 
 	& footer nav li {
@@ -58,4 +67,27 @@
 		padding-top:0;
 		width:400px;
 	}
+
+	& .intro-title {
+		min-height:95px;
+	}
+
+	& .error-404 .error-picture {
+		position:absolute;
+		top:5px;
+		right:-20px;
+	}
+
+	& .error-500 {
+		&	.error-picture {
+				position:absolute;
+				top:0;
+				right:170px;
+			}
+
+		& .header-intro {
+			margin-bottom:100px;
+		}
+	}
+
 }

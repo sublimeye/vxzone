@@ -1,0 +1,8 @@
+.eq_columns figure img {
+	border: 1px solid #CED2BF;
+	filter:progid:DXImageTransform.Microsoft.Glow(Color=#DADDCE,Strength=3);
+}
+
+.search-submit button {
+	min-height: auto;
+}

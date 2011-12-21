@@ -1,11 +1,15 @@
 $eqwidth: 440px;
-$heading-offset: 50px;
+$heading-offset: 60px;
 
 .equal-height-wrapper {
 	position:relative;
 	width:400px;
 	left:0px;
-	margin:$heading-offset 0 0;
+	margin:$heading-offset 0 10px;
+
+	& .switcher-item {
+		margin-top:35px;
+	}
 }
 
 .equal-height-wrapper-inner {
@@ -13,10 +17,6 @@ $heading-offset: 50px;
 	position:relative;
 	left: 100%;
 	margin:0px -100% 0px 60px;
-}
-
-.equal-height-wrapper .switcher-item {
-	margin-top:35px;
 }
 
 /* HOT Interesting
@@ -28,26 +28,55 @@ $heading-offset: 50px;
 	margin-right:-440px;
 	margin-left:0px;
 	left:-480px;
+
+	& .switcher-list {
+		top:3px;
+	}
 }
 
 .hot-interesting > h2, .hot-forum > h2 {
-	margin:-$heading-offset 0 30px;
+	margin:-$heading-offset 0 40px -22px;
 }
 
-.hot-interesting-list dd {
-  margin-bottom:10px;
+.hot-interesting-list a, .hot-forum-list a {
+	@include font-serif(13px, $c-link)
+}
+
+.hot-interesting-list {
+	& dt {
+		@include font-sans(11px);
+		margin-bottom:2px;
+	}
+
+	& dd {
+		margin-bottom:15px;
+	}
+
+	& dt a {
+		color:#000;
+	}
+}
+
+.hot-forum {
+	& > h2 {
+		margin-bottom: 35px;
+	}
+
+	& .switcher-list {
+		top:18px;
+		right:6px;
+	}
 }
 
 /* HOT Forum
 --------------------------------*/
-.hot-forum .switcher-list {
-	top:15px;
-}
+.hot-forum-list {
+	& li {
+		margin-bottom:11px;
+	}
 
-.hot-forum-list li {
-	margin-bottom:10px;
-}
-
-.hot-forum-list span {
-	@include font-sans(11px);
+	& span {
+		@include font-sans(11px);
+		display:inline-block;
+	}
 }

@@ -1,22 +1,29 @@
 body {
-	@include font-sans(12px, #000);
-	line-height:1.6;
+	@include font-sans(13px, #000);
+	line-height:1.5;
 }
 
 /* links
 --------------------------------*/
 a {
-	color:#BB0000;
+	color:#bb0404;
 }
 
 /* headers
 --------------------------------*/
+h1 {
+	@include font-serif(32px);
+}
+
 h2 {
-	@include font-serif(26px);
+	@include font-serif(28px);
 	margin:0 0 20px 0;
+}
+
+h3 {
+	@include font-serif(24px);
 }
 
 h2 a, h3 a {
 	color:#000;
 }
-
