@@ -67,6 +67,9 @@
 
 /* blocks
 --------------------------------*/
+.content .b-exude-border {
+  margin-bottom:25px;
+}
 .b-exude-border {
   position:relative;
 	padding:15px 20px;
@@ -82,12 +85,16 @@ $bex_shadow: 15px;
 	border-top:1px solid #999D89;
 	@include border-radius(10px);
 	margin-bottom: $bex_shadow + 10px !important;
+
+	&:after {
+		background:url("../img/bg_exude_rounded_shadow.png") no-repeat;
+		@include pseudo-abs(100%, $bex_shadow, auto, -$bex_shadow, 50%, 0); //top: 0
+		margin-left:-213	px;
+	}
 }
 
-.b-exude-rounded_sh:after {
-  background:url("../img/bg_exude_rounded_shadow.png");
-	@include pseudo-abs(100%, $bex_shadow, auto, -$bex_shadow, 0, 50%); //top: 0
-	margin-left:-427px / 2;
+.page-column .b-exude-rounded_sh {
+	padding:20px 20px 10px 20px;
 }
 
 /* shadowed light

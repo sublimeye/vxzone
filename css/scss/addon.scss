@@ -1,3 +1,11 @@
+/* sass
+--------------------------------*/
+@import "_compass.scss";
+@import "_mixins.scss";
+@import "_variables.scss";
+
+/* addon content
+--------------------------------*/
 .picture {
 	margin-bottom:15px;
 
@@ -10,9 +18,16 @@
 	text-align:center;
 }
 
-.accent {
+p.accent {
 	@include font-sans(18px);
 	line-height:1.5 !important;
+	margin-bottom:25px;
+}
+
+.accent p {
+	@include font-sans(18px);
+	line-height:1.5 !important;
+	margin-bottom:0;
 }
 
 .note-text {
@@ -34,6 +49,7 @@
   $incut-shadow-height: 17px;
   @include font-sans(12px);
   position:relative;
+  margin-bottom:25px;
   padding:15px 60px;
   background:#fff;
   line-height:1.7 !important;
@@ -68,4 +84,3 @@
 		border-top:1px solid #767772;
 	}
 }
-
