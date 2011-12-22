@@ -29,9 +29,6 @@ $heading-offset: 60px;
 	margin-left:0px;
 	left:-480px;
 
-	& .switcher-list {
-		top:3px;
-	}
 }
 
 .hot-interesting > h2, .hot-forum > h2 {
@@ -49,10 +46,15 @@ $heading-offset: 60px;
 	}
 
 	& dd {
-		margin-bottom:15px;
+		margin-bottom:14px;
+	}
+
+	& dd a {
+		line-height:1.66;
 	}
 
 	& dt a {
+		@include font-sans(11px);
 		color:#000;
 	}
 }
@@ -73,7 +75,12 @@ $heading-offset: 60px;
 .hot-forum-list {
 	& li {
 		margin-bottom:11px;
+
+	  & a {
+      line-height:1.66;
+	  }
 	}
+
 
 	& span {
 		@include font-sans(11px);

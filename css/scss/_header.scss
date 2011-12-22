@@ -72,7 +72,9 @@ $intro-shadow: 44px;
 
 .intro-title {
 	@include font-serif(26px, #204804);
-	text-shadow: 0 1px 0px #fff;margin-bottom: 26px;line-height: 1.2;
+	text-shadow: 0 1px 0px #fff;
+	margin-bottom: 26px;
+	line-height: 1.166;
 }
 
 .intro-home {
@@ -83,7 +85,7 @@ $intro-shadow: 44px;
 /* header search section
 --------------------------------*/
 .header-search-section {
-	margin-bottom:30px;
+	margin-bottom:31px;
 	height:87px;
 	@include box-sizing(border-box);
 	@extend .cf;
@@ -122,10 +124,10 @@ $intro-shadow: 44px;
 }
 
 .page-column .subscription-form input[type="text"], .search .search-field input {
-  @include font-sans(18px);
+  @include font-sans(16px);
 	display:block;
 	width: 100%;
-	padding: 6px 10px 5px;
+	padding: 7px 10px 7px;
 	border-width:1px;
 	border-style:solid;
 	border-top-color:#636363;
@@ -140,9 +142,9 @@ $intro-shadow: 44px;
 }
 
 .search-filter {
-  display:block;
+  display:inline-block;
 	color:#fff;
-	margin-top:8px;
+	margin-top:6px;
 	margin-bottom:-12px;
 }
 
@@ -155,7 +157,7 @@ $intro-shadow: 44px;
 .search-submit button {
   display:block;
 	border:1px solid #636363;
-	padding:7px 15px 6px 15px;
+	padding:7px 17px 6px 17px;
 	min-height:35px;
 	vertical-align:top;
 	background-color: #ffffff;
@@ -168,13 +170,14 @@ $intro-shadow: 44px;
 
 .header-search-section .subscription {
 	float:right;
-	width:280px;padding: 11px 10px 0 26px;
+	width:280px;
+	padding: 9px 10px 2px 26px;
 	height:100%;
 
 
   & .subscription-title {
 		@include font-serif(16px);
-		margin-bottom:6px;
+		margin-bottom:8px;
   }
 
 	& .subscription-link {
@@ -183,20 +186,6 @@ $intro-shadow: 44px;
 
 }
 
-.promo {
-  clear:both;
-  margin-bottom:30px;
-	padding:15px 0 12px 0;
-	background:#FFF;
-	border-width:1px;
-	border-style:solid;
-	border-top-color:#81886B;
-	border-right-color:#B3B7A7;
-	border-bottom-color:#D9DBD3;
-	border-left-color:#B3B7A7;
-	@include single-box-shadow(#B3B7A7, -1px, 2px, 3px, 0px, inset);
-	text-align:center;
-}
 
 /* intro showcase
 --------------------------------*/

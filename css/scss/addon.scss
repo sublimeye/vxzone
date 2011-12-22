@@ -20,13 +20,13 @@
 
 p.accent {
 	@include font-sans(18px);
-	line-height:1.5 !important;
-	margin-bottom:25px;
+	line-height:1.466 !important;
+	margin-bottom:19px;
 }
 
 .accent p {
 	@include font-sans(18px);
-	line-height:1.5 !important;
+	line-height:1.466 !important;
 	margin-bottom:0;
 }
 

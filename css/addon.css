@@ -20,14 +20,14 @@
 p.accent {
   font: 18px Arial, Helvetica, sans-serif;
   color: black;
-  line-height: 1.5 !important;
-  margin-bottom: 25px; }
+  line-height: 1.466 !important;
+  margin-bottom: 19px; }
 
 /* line 27, scss/addon.scss */
 .accent p {
   font: 18px Arial, Helvetica, sans-serif;
   color: black;
-  line-height: 1.5 !important;
+  line-height: 1.466 !important;
   margin-bottom: 0; }
 
 /* line 33, scss/addon.scss */

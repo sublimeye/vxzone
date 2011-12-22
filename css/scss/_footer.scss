@@ -6,30 +6,26 @@
 		margin-bottom:0;
 	}
 
-	& .eq_columns--three {
-		/*margin-bottom:6px;*/
-	}
-
 	& .eq_columns--six {
 		margin-bottom:30px;
 		@include font-serif(13px);
 	}
 
 	& .title {
-		margin-bottom:6px;
+		margin-bottom:10px;
 	}
 
 	& .title--exude {
-		margin-bottom:23px;
+		margin-bottom:26px;
 	}
 
 	& .title a {
-		@include font-serif(12px, $c-link);
+		@include font-serif(13px, $c-link);
 	}
 
 	& .subtitles {
 		@extend .cf;
-		margin-bottom:20px;
+		margin-bottom:22px;
 	}
 
 	& .subtitles a {

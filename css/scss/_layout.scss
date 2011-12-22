@@ -62,7 +62,7 @@ $page-footer-shadow: 20px;
   position:relative;
 	width:$page-width - $page-padding * 2;
 	margin:0 auto;
-	padding-top:$page-footer-shadow;
+	padding-top:$page-footer-shadow + 2;
 
 	&:before {
 		@include pseudo-abs(100%, $page-footer-shadow, -1px, auto, 50%);

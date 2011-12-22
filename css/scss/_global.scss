@@ -76,6 +76,21 @@
 	border-bottom:3px dotted #A4C78C;
 }
 
+.promo {
+  clear:both;
+  margin-bottom:30px;
+	padding:13px 0 10px 0;
+	background:#FFF;
+	border-width:1px;
+	border-style:solid;
+	border-top-color:#81886B;
+	border-right-color:#B3B7A7;
+	border-bottom-color:#D9DBD3;
+	border-left-color:#B3B7A7;
+	@include single-box-shadow(#B3B7A7, -1px, 2px, 3px, 0px, inset);
+	text-align:center;
+}
+
 /* blocks
 --------------------------------*/
 .content .b-exude-border {
@@ -117,7 +132,7 @@ $shadowed_light_height: 25px;
   padding:0 40px;
 	background:$cwhite;
 	padding-top:$shadowed_light_height + 7px;
-	margin-bottom:$shadowed_light_height + 20px;
+	margin-bottom:$shadowed_light_height + 18px;
 
 	& .switcher-list {
 		top:10px;
@@ -168,8 +183,9 @@ $shadowed_light_height: 25px;
   }
 
 	& .title {
-		margin-bottom:15px;
+		margin-bottom:16px;
 		line-height:1.6;
+		@include font-serif(13px, $c-link);
 	}
 
 	& .details {
@@ -187,22 +203,21 @@ $shadowed_light_height: 25px;
 }
 
 .eq_columns--three {
-	margin:0 -12px;
+	margin:0 -20px;
 
 	& li {
-		width:290px;
-		margin-left:12px;
-		margin-right:12px;
+		width:280px;
+		margin-left:20px;
+		margin-right:20px;
 	}
 }
 
 .eq_columns--three_short {
-	margin:0 -12px;
+	margin:0 -20px;
 
 	& li {
-		width:182px;
-		margin-left:12px;
-		margin-right:12px;
+		width:172px;
+		margin:0 20px 25px 20px;
 	}
 }
 
@@ -244,7 +259,7 @@ $shadowed_light_height: 25px;
 }
 
 .breadcrumbs li a, .breadcrumbs li span {
-	margin: 0 5px;
+	margin: 0 6px;
 }
 
 .breadcrumbs li:first-child a {

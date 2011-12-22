@@ -20,7 +20,7 @@ i {
 
 .content p {
 	margin-bottom:20px;
-	line-height:1.6;
+	line-height:1.66;
 }
 
 /* links
@@ -28,6 +28,10 @@ i {
 a {
 	color:#bb0404;
 	@include transition(.2s all ease-in-out);
+}
+
+.page-sidebar a {
+  font-size:13px;
 }
 
 .page-sidebar a:visited, .content a:visited {
@@ -97,7 +101,7 @@ h2 a, h3 a {
 }
 
 .content h2 {
-	margin-bottom:20px;
+	margin-bottom:13px;
 }
 
 /* lists

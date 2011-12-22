@@ -32,20 +32,28 @@
 
 	& .rating {
 	  float:left;
+    height:25px;
 	  margin-right:50px;
 	  position:relative;
 	  display:inline-block;
-		background:#4A8F1A;
 		@include font-sans(18px, #fff);
 
 		& .btn-counter {
 			width:28px;
 			height:23px;
+			font-size:20px;
+			line-height:1em;
+			vertical-align:top;
 		}
 
 		& .rating-data {
+		  position:relative;
+		  line-height:1.4;
 			display:inline-block;
-			margin:0 15px;
+			padding:0 15px;
+			height:100%;
+			vertical-align:top;
+  		background:#4A8F1A;
 		}
 
 	}
@@ -110,7 +118,7 @@ $article-padding: 25px;
 }
 
 .comments-amount {
-	@include font-sans(14px);
+	@include font-sans(14px, #474744);
 }
 
 /* post comments form
@@ -121,11 +129,15 @@ $article-padding: 25px;
 	.form-line {
 		margin-bottom:8px;
 	}
+
+  & input[type="text"] {
+    width:175px;
+  }
 }
 
 .post-new-comment {
   margin-top:25px;
-  margin-bottom:25px;
+  margin-bottom:18px;
 }
 
 .comment-item {
@@ -177,3 +189,6 @@ $article-padding: 25px;
 	}
 }
 
+.related-articles h3 {
+   margin-bottom:25px;
+}

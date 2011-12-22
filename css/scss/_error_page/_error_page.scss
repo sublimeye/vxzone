@@ -20,6 +20,10 @@
 		display:none;
 	}
 
+	& .page:after {
+	  display:none;
+	}
+
 	& .page {
 		width:920px;
 		margin:0 auto;
@@ -43,11 +47,11 @@
 
 	& h1 {
 		@include font-serif(48px);
-		margin-bottom:70px;
+		margin-bottom:72px;
 	}
 
 	& footer {
-		margin-top:60px;
+		margin-top:53px;
 	}
 
 	& footer nav li {
@@ -56,7 +60,7 @@
 
 	& footer nav li a {
 		display:inline-block;
-		margin:0 10px;
+		margin:0 5px;
 	}
 
 	& footer nav li:first-child a {
@@ -69,7 +73,7 @@
 	}
 
 	& .intro-title {
-		min-height:95px;
+		min-height:91px;
 	}
 
 	& .error-404 .error-picture {
@@ -86,7 +90,7 @@
 			}
 
 		& .header-intro {
-			margin-bottom:100px;
+			margin-bottom:103px;
 		}
 	}
 
