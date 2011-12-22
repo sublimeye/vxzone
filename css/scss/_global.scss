@@ -47,7 +47,8 @@
 	cursor: default;
 }
 
-.switcher-list a:hover {
+.switcher-list li a:hover {
+  color:$c-link-hover;
 	border-bottom:1px dashed $c-link-hover !important;
 }
 

@@ -121,11 +121,11 @@ $intro-shadow: 44px;
 	display:block;
 }
 
-.subscription-form input[type="text"], .search-field input {
+.page-column .subscription-form input[type="text"], .search .search-field input {
   @include font-sans(18px);
 	display:block;
 	width: 100%;
-	padding: 5px 10px;
+	padding: 6px 10px 5px;
 	border-width:1px;
 	border-style:solid;
 	border-top-color:#636363;
@@ -155,8 +155,8 @@ $intro-shadow: 44px;
 .search-submit button {
   display:block;
 	border:1px solid #636363;
-	padding:7px 15px 7px 15px;
-	min-height:33px;
+	padding:7px 15px 6px 15px;
+	min-height:35px;
 	vertical-align:top;
 	background-color: #ffffff;
 	@include font-sans(15px);

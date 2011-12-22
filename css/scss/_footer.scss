@@ -38,7 +38,7 @@
 		clear:left;
 		margin-bottom:5px;
 		line-height:1.4;
-		color:#2E2F2A !important;
+		color:#2E2F2A;
 	}
 }
 
@@ -74,6 +74,10 @@
 
 .contact-us a {
 	color:#fff;
+}
+
+.contact-us a:hover {
+	text-decoration:none;
 }
 
 .copy {

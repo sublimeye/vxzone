@@ -17,6 +17,10 @@
 .article-tags {
 	color:#52544d;
 	margin-bottom:35px;
+
+  & a:visited {
+    color:$c-link;
+  }
 }
 
 .content .article-author {
