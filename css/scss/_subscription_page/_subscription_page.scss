@@ -1,0 +1,39 @@
+/* subscription styles
+--------------------------------*/
+.b-exude-border.subscription-form {
+  margin-bottom:40px;
+}
+
+.subscription-email {
+  float:left;
+  width:415px;
+  margin-right:10px;
+  margin-bottom:5px;
+}
+
+.subscription-submit {
+  $lr-padding: 15px;
+  float:left;
+
+  & button {
+    padding-left:$lr-padding;
+    padding-right:$lr-padding;
+  }
+}
+
+.previous-articles {
+  margin-top:22px;
+
+  & dt {
+    margin-bottom:2px;
+  }
+
+  & dd li {
+    line-height:1.366;
+    margin-bottom:4px;
+  }
+
+  & dd ul {
+    margin-bottom:12px;
+  }
+}

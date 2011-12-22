@@ -37,6 +37,6 @@
 --------------------------------*/
 	@import "_article_page/_article_page.scss";
 
-/* addon styles (different css for joomla editor implementation)
+/* article
 --------------------------------*/
-/*@import "addon.scss";*/
+	@import "_subscription_page/_subscription_page.scss";

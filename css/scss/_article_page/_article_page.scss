@@ -94,6 +94,15 @@ $article-padding: 25px;
 
 .comments-list-container {
   margin-bottom:50px;
+
+  & ul li {
+    padding-left:0;
+  }
+
+  & li:before {
+    content: '';
+    display:none;
+  }
 }
 
 .comments-amount {
@@ -134,6 +143,10 @@ $article-padding: 25px;
 
 	& .comment-user_name {
 		@include font-serif(16px, #3f7f12);
+	}
+
+	& .comment-user_name:hover {
+	  color:$c-link;
 	}
 
   & .comment-body p {

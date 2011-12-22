@@ -121,7 +121,7 @@ $intro-shadow: 44px;
 	display:block;
 }
 
-.search-field input {
+.subscription-form input[type="text"], .search-field input {
   @include font-sans(18px);
 	display:block;
 	width: 100%;

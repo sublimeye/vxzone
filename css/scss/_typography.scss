@@ -27,6 +27,7 @@ i {
 --------------------------------*/
 a {
 	color:#bb0404;
+	@include transition(.2s all ease-in-out);
 }
 
 .page-sidebar a:visited, .content a:visited {
@@ -34,25 +35,42 @@ a {
 }
 
 .page .content a:hover, .page .page-sidebar a:hover, a:hover {
-	color:#356812;
+	color:$c-link-hover;
+}
+
+a.lnk-dashed {
+  text-decoration:none;
+  border-bottom:1px dotted $c-link;
+}
+
+a:hover.lnk-dashed {
+  color:$c-link;
+  border-bottom:2px solid $c-link;
+}
+
+a.lnk-print:visited {
+  color:$c-link;
 }
 
 /* headers
 --------------------------------*/
 h1, h2, h3, h4, h5 {
 	@include font-serif(24px);
-	line-height:1.6;
+	line-height:1.166;
 }
 
 h1 {
+  font-size:32px;
 	margin-bottom:16px;
 }
 
 h2 {
+  font-size:28px;
 	margin:0 0 15px 0;
 }
 
 h3 {
+  font-size:24px;
 	margin-bottom:15px;
 }
 

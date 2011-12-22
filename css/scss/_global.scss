@@ -34,16 +34,26 @@
 	@include border-radius(7px);
 }
 
-.switcher-list li a {
+.switcher-list li a, .switcher-list li a:visited {
   text-decoration:none;
   color:$c-link;
 	border-bottom:1px dashed $c-link;
 	line-height:1;
 }
 
-.switcher-list .active a {
+.switcher-list .active a, .switcher-list .active a:visited {
   color:$cwhite;
 	border-bottom:none;
+	cursor: default;
+}
+
+.switcher-list a:hover {
+	border-bottom:1px dashed $c-link-hover !important;
+}
+
+.switcher-list .active a:hover {
+  color:$cwhite !important;
+	border-bottom:none !important;
 }
 
 /* CLEAR FIX*/
@@ -148,7 +158,13 @@ $shadowed_light_height: 25px;
 	& li {
 		float:left;
 		margin-bottom:40px;
+		padding-left:0 !important;
 	}
+
+  & li:before {
+    content: '';
+    display:none;
+  }
 
 	& .title {
 		margin-bottom:15px;
