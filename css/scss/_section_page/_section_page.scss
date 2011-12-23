@@ -35,8 +35,8 @@
   padding-top:$entry-sh + 7px;
 
   &:before {
-    @include pseudo-abs(100%, $entry-sh, 0, auto, 50%);
-    background:url("../img/bg_entry_divider_sh.png") no-repeat;
+    @include pseudo-abs(601px, $entry-sh, 0, auto, 50%);
+    background:url("../img/bg_shadows.png") no-repeat 0 -25px;
     margin-left:-300px;
   }
 }
@@ -49,11 +49,7 @@
   text-align:center;
 
   &:after {
-    $w: 600px;
-    $h: 17px;
-    @include pseudo-abs($w, $h, auto, -$h, 50%);
-    margin-left:-$w/2;
-    background:url("../img/bg_incut_shadow.png") no-repeat;
+		@include incut-shadow();
   }
 
   & .prev-page, & .next-page {

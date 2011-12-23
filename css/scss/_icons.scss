@@ -1,7 +1,7 @@
 .ico {
   position:relative;
 	display:inline-block;
-	background:url("../img/icons.png");
+	background:url("../img/icons.png") no-repeat;
 }
 
 .ico-print {
@@ -9,7 +9,7 @@
 	width:15px;
 	height:11px;
 	margin-right:5px;
-	background:url("../img/tmp_ico_ico-print.png") no-repeat;
+	background-position:-40px 0;
 }
 
 .ico-discuss {
@@ -17,7 +17,6 @@
 	width:24px;
 	height:16px;
 	margin-right:5px;
-	background:url("../img/tmp_ico_ico-discuss.png") no-repeat;
 }
 
 .article-navigation .ico {
@@ -29,7 +28,7 @@
 	left:0;
 	width:16px;
 	height:6px;
-	background:url("../img/tmp_ico_ico-prev-article.png") no-repeat;
+	background-position:-24px -7px;
 }
 
 .ico-next-article {
@@ -37,5 +36,5 @@
 	right:0;
 	width:16px;
 	height:6px;
-	background:url("../img/tmp_ico_ico-next-article.png") no-repeat;
+	background-position:-24px 0;
 }

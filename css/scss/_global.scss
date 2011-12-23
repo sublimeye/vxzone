@@ -2,14 +2,11 @@
 --------------------------------*/
 .switcher {
 	@extend .cf;
+margin-bottom:20px;
 }
 
 .switcher-item {
 	display:none;
-}
-
-.switcher-item[data-sitem="1"] {
-	display:block;
 }
 
 .switcher-list {
@@ -103,8 +100,8 @@
 	@include box-sizing(border-box);
 }
 
-$bex_shadow: 15px;
 .b-exude-rounded_sh {
+	$bex_shadow: 15px;
   position:relative;
   padding:0 20px;
 	background:#EDEFE4;
@@ -113,8 +110,8 @@ $bex_shadow: 15px;
 	margin-bottom: $bex_shadow + 10px !important;
 
 	&:after {
-		background:url("../img/bg_exude_rounded_shadow.png") no-repeat;
-		@include pseudo-abs(100%, $bex_shadow, auto, -$bex_shadow, 50%, 0); //top: 0
+		background:url("../img/bg_shadows.png") no-repeat 0 -68px;
+		@include pseudo-abs(427px, $bex_shadow, auto, -$bex_shadow, 50%); //top: 0
 		margin-left:-213px;
 	}
 }
@@ -125,8 +122,8 @@ $bex_shadow: 15px;
 
 /* shadowed light
 --------------------------------*/
-$shadowed_light_height: 25px;
 .b-exude-shadowed-light {
+	$shadowed_light_height: 25px;
   position:relative;
   margin:0 -40px;
   padding:0 40px;
@@ -137,22 +134,23 @@ $shadowed_light_height: 25px;
 	& .switcher-list {
 		top:10px;
 	}
-}
 
-.b-exude-shadowed-light:before {
-  background:url("../img/bg_exude_shadowed_light.png");
-	@include pseudo-abs(100%, $shadowed_light_height, 0, auto, 0);
-	z-index:1;
-}
+	&:before, &:after {
+	  background:url("../img/bg_shadows.png") no-repeat;
+	}
 
-.b-exude-shadowed-light:after {
-  background:url("../img/bg_exude_shadowed_light.png");
-	@include pseudo-abs(100%, $shadowed_light_height, auto, -$shadowed_light_height, 0);
-	z-index:1;
+	&:before {
+		@include pseudo-abs(917px, $shadowed_light_height, 0, auto, 0);
+	  z-index: 1;
+	}
+
+	&:after {
+		@include pseudo-abs(917px, $shadowed_light_height, auto, -$shadowed_light_height, 0);
+	  z-index: 1;
+	}
 }
 
 .b-exude-light {
-  $incut-shadow-height: 17px;
   position:relative;
   margin-bottom:25px;
   padding:25px 10px;
@@ -160,9 +158,7 @@ $shadowed_light_height: 25px;
   line-height:1.7 !important;
 
 	&:before {
-	  @include pseudo-abs(100%, $incut-shadow-height, 0, auto, 0); //top: 0
-		background:url("../img/bg_incut_shadow.png");
-		z-index:1;
+	  @include incut-shadow();
 	}
 }
 

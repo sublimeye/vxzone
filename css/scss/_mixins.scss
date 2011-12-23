@@ -33,3 +33,12 @@ $full: 100%;
 	font: $fz Georgia, "Times New Roman", serif;
 	color:$color;
 }
+
+@mixin incut-shadow {
+  $w: 599px;
+  $h: 17px;
+	@include pseudo-abs($w, $h, 0, auto, 50%);
+	background:url("../img/bg_shadows.png") no-repeat 0 -51px;
+	margin-left:-$w/2;
+	z-index:1;
+}

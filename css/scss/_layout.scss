@@ -46,7 +46,6 @@ html, body {
 	width:280px;
 }
 
-$page-footer-shadow: 20px;
 .page-footer {
   border-top:1px solid #B3B7A4;
 	background:#D1D6C1;
@@ -59,15 +58,16 @@ $page-footer-shadow: 20px;
 }
 
 .page-footer-wrapper {
+	$page-footer-shadow: 25px;
   position:relative;
 	width:$page-width - $page-padding * 2;
 	margin:0 auto;
 	padding-top:$page-footer-shadow + 2;
 
 	&:before {
-		@include pseudo-abs(100%, $page-footer-shadow, -1px, auto, 50%);
-		background:url("../img/bg_exude_shadowed_light.png");
-		margin-left:-(917px / 2);
+		@include pseudo-abs(917px, $page-footer-shadow, -1px, auto, 50%);
+	  background:url("../img/bg_shadows.png") no-repeat;
+		margin-left:-458px;
 	}
 }
 

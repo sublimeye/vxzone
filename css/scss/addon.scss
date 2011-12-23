@@ -56,9 +56,7 @@ p.accent {
 	border-bottom:1px solid #BEBFB6;
 
 	&:before {
-	  @include pseudo-abs(100%, $incut-shadow-height, 0, auto, 0); //top: 0
-		background:url("../img/bg_incut_shadow.png");
-		z-index:1;
+	  @include incut-shadow();
 	}
 }
 

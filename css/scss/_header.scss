@@ -186,21 +186,36 @@ $intro-shadow: 44px;
 
 }
 
-
 /* intro showcase
 --------------------------------*/
-$scitem-width: 120px;
 .intro-showcase {
+	$scitem-width: 110px;
+	$scitem-height: 78px;
+	$mt: 12px;
   position:absolute;
-  top:0;
-  right:88px;
-  width:$scitem-width * 4;
-}
+  top:15px - $mt;
+  right:28px;
+  width:($scitem-width * 4) + (33px * 4);
 
-.intro-showcase .scitem {
-	float:left;
-	width: $scitem-width;
-	height:80px;
-	margin-top:15px;
-	outline:1px solid blue;
+	&.enabled .scitem {
+		visibility: visible;
+	}
+
+  & .scitem {
+		float:left;
+		visibility:hidden;
+		width: $scitem-width;
+		height:$scitem-height;
+		margin:$mt 33px 0 0;
+		background:url("../img/sc_items.png") no-repeat;
+  }
+
+	@for $i from 0 to 8 {
+		$ii: $i + 1;
+		$pos: $i * -110px;
+		& .scitem-#{$ii} {
+			background-position:$pos 0;
+		}
+	}
+
 }
