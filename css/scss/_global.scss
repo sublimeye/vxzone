@@ -182,6 +182,10 @@ margin-bottom:20px;
 		margin-bottom:16px;
 		line-height:1.6;
 		@include font-serif(13px, $c-link);
+
+			& a {
+			  line-height:1.66;
+			}
 	}
 
 	& .details {

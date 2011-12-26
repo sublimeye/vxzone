@@ -1,0 +1,146 @@
+body {
+	font-size: 12pt !important;
+}
+
+*, *:before, *:after {
+	background: #fff !important;
+	filter: none;
+	color: #000 !important;
+}
+
+/**
+* removing all navigation et
+*/
+.header-nav,
+.header-search-section,
+.promo,
+.lnk-print,
+.page-sidebar,
+.article-tags,
+.article-actions,
+.article-discuss,
+.intro-showcase {
+	display: none;
+}
+
+/* removing article additional blocks except content
+--------------------------------*/
+.page-column > * {
+	display: none;
+}
+
+.page-column .content {
+	display: block;
+}
+
+.page-column * {
+	float: none;
+}
+
+
+/* global
+--------------------------------*/
+.picture img {
+	-moz-box-shadow: 0 0 0 0 #fff;
+	-webkit-box-shadow: 0 0 0 0 #fff;
+	-o-box-shadow: 0 0 0 0 #fff;
+	box-shadow: 0 0 0 0 #fff;
+}
+
+time,
+.incut,
+.breadcrumbs,
+.page-footer *
+{
+	font-size: 10pt !important;
+}
+
+
+/* pretty content
+--------------------------------*/
+.page-column {
+	float: none;
+	width: auto;
+}
+
+.page-column .content time {
+	margin: 0;
+}
+
+.accent {
+	font-size: 14pt;
+}
+
+.incut {
+	border-bottom: 0;
+}
+
+.incut:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	border-top: 1pt solid #ccc;
+}
+
+/* pretty header
+-------------------------------*/
+.intro-title {
+	white-space: nowrap;
+}
+
+.intro-content {
+	padding-top: 0;
+}
+
+.header-intro {
+	height: auto;
+}
+
+.intro-home {
+	position: absolute;
+	right: 10%;
+	top: 0;
+	padding: 5pt;
+}
+
+.intro-home span {
+	position: relative;
+	z-index: 10;
+}
+
+.pr-intro-home-bg {
+	position: absolute;
+	z-index: 0;
+	right: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* pretty footer
+--------------------------------*/
+.page-footer {
+	border-top: 1pt solid #D8D8D8;
+	width: 100%;
+}
+
+.page-footer-wrapper .contact-us,
+.page-footer-wrapper > * {
+	display: none;
+}
+
+.page-footer-wrapper .footnote {
+	position: static;
+	display: block;
+}
+
+/*
+.content a:link:after, .content a:visited:after {
+   content: " (" attr(href) ") ";
+   font-size: 90%;
+}
+*/

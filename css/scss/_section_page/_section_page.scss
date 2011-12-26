@@ -50,6 +50,8 @@
 
   &:after {
 		@include incut-shadow();
+		top:auto;
+    bottom:-17px;
   }
 
   & .prev-page, & .next-page {

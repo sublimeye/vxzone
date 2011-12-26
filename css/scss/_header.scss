@@ -27,9 +27,10 @@
 		  $padding: 10px;
 			@include pseudo-abs(100%, 60px, -$top-offset, auto, -$padding);
 			padding:0 $padding;
-			background-color: #D00E0E;
-			@include filter-gradient(#D00E0E, #880A0A, vertical);
-			@include background-image(linear-gradient(top, #D00E0E 0%, #880A0A 100%));
+
+      background-color: #d00e0e;
+      @include filter-gradient(#d00e0e, #880a0a, vertical);
+      @include background-image(linear-gradient(top, #d00e0e 0%,#880a0a 100%));
 		}
 	}
 }
@@ -80,6 +81,10 @@ $intro-shadow: 44px;
 .intro-home {
 	text-decoration:none;
 	@include font-sans(18px, #2a2a2a);
+}
+
+.pr-intro-home-bg {
+  display:none;
 }
 
 /* header search section
@@ -197,13 +202,8 @@ $intro-shadow: 44px;
   right:28px;
   width:($scitem-width * 4) + (33px * 4);
 
-	&.enabled .scitem {
-		visibility: visible;
-	}
-
   & .scitem {
 		float:left;
-		visibility:hidden;
 		width: $scitem-width;
 		height:$scitem-height;
 		margin:$mt 33px 0 0;

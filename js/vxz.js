@@ -17,20 +17,7 @@ var VXZ = {
 	},
 
 	init: function() {
-		this.showcase();
 		this.vxzSwitcher();
-	},
-
-	/**
-	 * Header Showcase-items randomizer
-	 */
-	showcase: function() {
-		var $sc = $(this.cfg.sShowcase);
-
-		if ( $sc.length ) {
-			$sc.addClass('enabled');
-			$sc.shuffle();
-		}
 	},
 
 	vxzSwitcher: function() {
