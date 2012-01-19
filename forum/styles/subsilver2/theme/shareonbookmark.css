@@ -1,0 +1,54 @@
+/**
+* styles/prosilver/theme/shareonbookmark.css
+*
+* I'm request you retain the copyright notice below including the link to site author.
+* @version $Id: shareonbookmark.css, v 1.0.0 2010/12/11 01:10:26 Porutchik Exp $
+* @copyright (c) 2010 Sergey aka Porutchik, http://forum.aeroion.ru
+* @license http://opensource.org/licenses/gpl-license.php GNU Public License
+*
+*/
+
+/* Borrowed from http://www.ebay-forum.ru/phpBB2/index.html */
+
+/************	Social buttons
+******************************************/
+.share {margin: 0 3px 0 3px}
+.share a {
+	display: block;
+	width: 16px;
+	height: 16px; 
+	float: left;
+	margin: 0 2px;
+	padding-top: 2px;
+	background: url('{T_THEME_PATH}/images/shareicons.png') no-repeat;
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+	opacity: 0.5; /* CSS3 - Mozilla 1.7b +, Firefox 0.9 +, Safari 1.2+, Opera 9 */
+}
+.share a:hover {
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
+	opacity: 1.0;
+}
+.share .vk {
+	background-position: 0 0;
+}
+.share .fb {
+	background-position: -16px 0;
+}
+.share .tw {
+	background-position: -32px 0;
+}
+.share .od {
+	background-position: -48px 0;
+}
+.share .lj {
+	background-position: -64px 0;
+}
+.share .mr {
+	background-position: -80px 0;
+}
+.share .bd {
+	background-position: -96px 0;
+}
+.share .ya {
+	background-position: -112px 0;
+}

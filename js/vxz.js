@@ -13,11 +13,15 @@ var VXZ = {
 		sShowcase: '.intro-showcase',
 		sSwitcher: '.switcher',
 		sSwitcherList: '.switcher-list',
-		sSwitcherItem: '.switcher-item'
+		sSwitcherItem: '.switcher-item',
+		sArticleVoting: '#article-voting',
+		sVotingNotification: '.voting-notification',
+		msgVotingSuccessful: 'Ваш голос учтен, спасибо!'
 	},
 
 	init: function() {
 		this.vxzSwitcher();
+		this.voting();
 	},
 
 	vxzSwitcher: function() {
@@ -54,5 +58,50 @@ var VXZ = {
 
 			});
 		}.bind(this));
+	},
+
+	voting: function() {
+		var voting = $(this.cfg.sArticleVoting),
+			counter = voting.find('.rating-data'),
+			voteBtn,
+			_vxz = this;
+
+		if ( voting.length ) {
+			voteBtn = voting.find('.btn-counter');
+
+			voteBtn.bind('click.vote_action', function(e) {
+				e.preventDefault();
+				// send request
+				$.ajax({
+					type:'POST',
+					url: 'voting.php?task=like&article_id=2&time=95',
+					dataType:'json',
+					success:function (data, status, jqXHR) {
+						if (status === "success") {
+							// show notification text
+							_vxz.showVotingNotification(voting);
+							// update voting caounter
+							counter.text(data['count']);
+						}
+					},
+					complete:function (jqXHR, status) {
+						if (status !== "success") {
+							console.log('Bad request');
+						}
+					}
+				});
+			}.bind(this));
+		}
+	},
+
+	showVotingNotification: function(container) {
+	var message = this.cfg.msgVotingSuccessful,
+		notification = container.find(this.cfg.sVotingNotification);
+
+		notification.text(message);
+		notification.stop(false,false).fadeIn(200);
+		setTimeout(function() {
+			notification.stop(false,false).fadeOut();
+		}, 3000);
 	}
 };

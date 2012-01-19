@@ -35,6 +35,6 @@ $rc-margin: 40px;
 	width:$rc-width - $rc-margin;
 	margin-right:$rc-margin;
 	margin-top:-.35em;
-	line-height:1.6em;
 	@include font-serif(13px);
+	line-height:1.6em;
 }

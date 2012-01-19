@@ -1,11 +1,19 @@
 body {
-	font-size: 12pt !important;
+	font-size: 12pt;
 }
 
-*, *:before, *:after {
+*, a {
 	background: #fff !important;
 	filter: none;
+	color: #000;
+}
+
+.content * {
 	color: #000 !important;
+}
+
+*:before, *:after {
+	display: none !important;
 }
 
 /**
@@ -33,10 +41,6 @@ body {
 	display: block;
 }
 
-.page-column * {
-	float: none;
-}
-
 
 /* global
 --------------------------------*/
@@ -53,6 +57,17 @@ time,
 .page-footer *
 {
 	font-size: 10pt !important;
+}
+
+.breadcrumbs li {
+	float: none;
+	display: inline-block;
+}
+
+.content ul li {
+	margin-left: 20px;
+	padding-left: 0;
+	list-style: disc;
 }
 
 
@@ -91,11 +106,17 @@ time,
 	white-space: nowrap;
 }
 
+.intro-title span {
+	display: inline;
+}
+
 .intro-content {
 	padding-top: 0;
+	margin-left: 0;
 }
 
 .header-intro {
+	margin-top: 40px;
 	height: auto;
 }
 
@@ -107,18 +128,18 @@ time,
 }
 
 .intro-home span {
-	position: relative;
-	z-index: 10;
+	display: none;
 }
 
 .pr-intro-home-bg {
 	position: absolute;
-	z-index: 0;
+	z-index: 1;
 	right: 0;
 	top: 0;
 	display: block;
-	width: 100%;
-	height: 100%;
+	width: 120px;
+	height: 37px;
+	background: black;
 }
 
 /* pretty footer
@@ -138,9 +159,25 @@ time,
 	display: block;
 }
 
-/*
-.content a:link:after, .content a:visited:after {
-   content: " (" attr(href) ") ";
-   font-size: 90%;
+.copy {
+	color: #666666;
+	font-size: 10pt;
 }
-*/
+
+ol li:before, ol li:after, .page-column ul li:before {
+	display: block !important;
+}
+
+.page-column ul li {
+	display: block;
+	position: relative;
+}
+
+.page-column ul li:before {
+	position: absolute;
+	left: -1em;
+	top: 0;
+	color: #000;
+	line-height: 1.2em;
+	content: '\2014';
+}

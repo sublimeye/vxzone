@@ -56,6 +56,10 @@ a.lnk-print:visited {
   color:$c-link;
 }
 
+.switcher-list a {
+	outline: none;
+}
+
 /* headers
 --------------------------------*/
 h1, h2, h3, h4, h5 {
@@ -115,6 +119,30 @@ h2 a, h3 a {
 	margin-bottom:0;
 }
 
+.page-column ol {
+	counter-reset: item;
+}
+
+.page-column ol {
+	margin-left:0;
+}
+.page-column ol ol {
+	margin-left:20px;
+}
+
+.page-column ol li {
+	display: block;
+	clear:both;
+}
+
+
+.page-column ol li:before {
+	counter-increment: item;
+	content: counters(item, ".") ".";
+	float:left;
+	margin-right:.6em;
+}
+
 /* unordered
 --------------------------------*/
 .page-column {
@@ -145,7 +173,6 @@ h2 a, h3 a {
 	/* ordered
 	--------------------------------*/
 	& ol {
-		margin-left:20px;
 		list-style: decimal;
 
 		& li {

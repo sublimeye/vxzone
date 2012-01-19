@@ -78,6 +78,10 @@ $intro-shadow: 44px;
 	line-height: 1.166;
 }
 
+.intro-title span {
+  display:block;
+}
+
 .intro-home {
 	text-decoration:none;
 	@include font-sans(18px, #2a2a2a);

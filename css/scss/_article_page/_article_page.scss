@@ -56,6 +56,14 @@
   		background:#4A8F1A;
 		}
 
+		& .voting-notification {
+		  font-size:13px;
+			position:absolute;
+			width:500px;
+			left:0;
+			top:35px;
+			color:#000;
+		}
 	}
 
 	& .views {
