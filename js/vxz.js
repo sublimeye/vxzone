@@ -15,8 +15,7 @@ var VXZ = {
 		sSwitcherList: '.switcher-list',
 		sSwitcherItem: '.switcher-item',
 		sArticleVoting: '#article-voting',
-		sVotingNotification: '.voting-notification',
-		msgVotingSuccessful: 'Ваш голос учтен, спасибо!'
+		sVotingNotification: '.voting-notification'
 	},
 
 	init: function() {
@@ -61,25 +60,27 @@ var VXZ = {
 	},
 
 	voting: function() {
-		var voting = $(this.cfg.sArticleVoting),
-			counter = voting.find('.rating-data'),
-			voteBtn,
-			_vxz = this;
+		var _vxz = this,
+			url,
+			voting = $(this.cfg.sArticleVoting),
+			counter, voteBtn;
 
 		if ( voting.length ) {
 			voteBtn = voting.find('.btn-counter');
+			counter = voting.find('.rating-data');
 
 			voteBtn.bind('click.vote_action', function(e) {
 				e.preventDefault();
+
 				// send request
 				$.ajax({
 					type:'POST',
-					url: 'voting.php?task=like&article_id=2&time=95',
+					url: e.target.href,
 					dataType:'json',
 					success:function (data, status, jqXHR) {
 						if (status === "success") {
 							// show notification text
-							_vxz.showVotingNotification(voting);
+							_vxz.showVotingNotification(voting, data['msg']);
 							// update voting caounter
 							counter.text(data['count']);
 						}
@@ -94,9 +95,8 @@ var VXZ = {
 		}
 	},
 
-	showVotingNotification: function(container) {
-	var message = this.cfg.msgVotingSuccessful,
-		notification = container.find(this.cfg.sVotingNotification);
+	showVotingNotification: function(container, message) {
+		var notification = container.find(this.cfg.sVotingNotification);
 
 		notification.text(message);
 		notification.stop(false,false).fadeIn(200);
