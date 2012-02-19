@@ -4,48 +4,65 @@
 --------------------------------*/
 /* line 9, scss/addon.scss */
 .picture {
-  margin-bottom: 15px; }
-  /* line 12, scss/addon.scss */
-  .picture img {
-    -moz-box-shadow: 0 0 6px 5px #c8cdb6;
-    -webkit-box-shadow: 0 0 6px 5px #c8cdb6;
-    -o-box-shadow: 0 0 6px 5px #c8cdb6;
-    box-shadow: 0 0 6px 5px #c8cdb6; }
+  margin-bottom: 15px;
+}
+/* line 12, scss/addon.scss */
+.picture img {
+  -moz-box-shadow: 0 0 6px 5px #c8cdb6;
+  -webkit-box-shadow: 0 0 6px 5px #c8cdb6;
+  -o-box-shadow: 0 0 6px 5px #c8cdb6;
+  box-shadow: 0 0 6px 5px #c8cdb6;
+}
 
 /* line 17, scss/addon.scss */
-.picture-centered {
-  text-align: center; }
+.content .picture-centered {
+  text-align: center;
+  vertical-align: top;
+  margin: 0 -10px -10px;
+}
 
-/* line 21, scss/addon.scss */
+/* line 23, scss/addon.scss */
+.picture-centered img {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 10px 30px;
+}
+
+/* line 29, scss/addon.scss */
 p.accent {
   font: 18px Arial, Helvetica, sans-serif;
   color: black;
   line-height: 1.466 !important;
-  margin-bottom: 19px; }
+  margin-bottom: 19px;
+}
 
-/* line 27, scss/addon.scss */
+/* line 35, scss/addon.scss */
 .accent p {
   font: 18px Arial, Helvetica, sans-serif;
   color: black;
   line-height: 1.466 !important;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+}
 
-/* line 33, scss/addon.scss */
+/* line 41, scss/addon.scss */
 .note-text, .note {
   color: #5F605B;
-  font-style: italic; }
+  font-style: italic;
+}
 
-/* line 38, scss/addon.scss */
+/* line 46, scss/addon.scss */
 .note {
-  padding-left: 120px; }
+  padding-left: 120px;
+}
 
-/* line 43, scss/addon.scss */
+/* line 51, scss/addon.scss */
 .caption {
   font-style: italic;
   color: #346a0e;
-  text-align: center; }
+  text-align: center;
+}
 
-/* line 49, scss/addon.scss */
+/* line 57, scss/addon.scss */
 .incut {
   font: 12px Arial, Helvetica, sans-serif;
   color: black;
@@ -54,39 +71,119 @@ p.accent {
   padding: 15px 60px;
   background: #fff;
   line-height: 1.7 !important;
-  border-bottom: 1px solid #BEBFB6; }
-  /* line 59, scss/addon.scss */
-  .incut:before {
-    content: '';
-    position: absolute;
-    display: block;
-    top: 0;
-    bottom: auto;
-    left: 50%;
-    right: auto;
-    width: 599px;
-    height: 17px;
-    z-index: -1;
-    background: url("../img/bg_shadows.png") no-repeat 0 -51px;
-    margin-left: -299.5px;
-    z-index: 1; }
+  border-bottom: 1px solid #BEBFB6;
+}
+/* line 67, scss/addon.scss */
+.incut:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  width: 599px;
+  height: 17px;
+  z-index: -1;
+  background: url("../img/bg_shadows.png") no-repeat 0 -51px;
+  margin-left: -299.5px;
+  z-index: 1;
+}
 
-/* line 64, scss/addon.scss */
+/* line 72, scss/addon.scss */
 .data-table {
   width: 100%;
   margin-bottom: 25px;
   border-top: 2px solid #767772;
-  border-bottom: 2px solid #767772; }
-  /* line 70, scss/addon.scss */
-  .data-table td {
-    padding: 10px 10px; }
-  /* line 74, scss/addon.scss */
-  .data-table .head td {
-    padding: 5px 10px;
-    font-weight: bold;
-    color: #3f7f12;
-    background: #fff;
-    border-bottom: 1px solid #767772; }
-  /* line 82, scss/addon.scss */
-  .data-table .bdt {
-    border-top: 1px solid #767772; }
+  border-bottom: 2px solid #767772;
+}
+/* line 78, scss/addon.scss */
+.data-table td {
+  padding: 10px 10px;
+}
+/* line 82, scss/addon.scss */
+.data-table .head td {
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #3f7f12;
+  background: #fff;
+  border-bottom: 1px solid #767772;
+}
+/* line 90, scss/addon.scss */
+.data-table .bdt {
+  border-top: 1px solid #767772;
+}
+
+/* lists (duplicated styles for teditor
+--------------------------------*/
+/* line 97, scss/addon.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 99, scss/addon.scss */
+.page-column ul, .page-column ol {
+  margin-bottom: 15px;
+}
+
+/* line 103, scss/addon.scss */
+.page-column ol {
+  margin-left: 0;
+  counter-reset: item;
+}
+
+/* line 108, scss/addon.scss */
+.page-column ol ol {
+  margin-left: 20px;
+}
+
+/* line 112, scss/addon.scss */
+.page-column ol li {
+  display: block;
+  clear: both;
+  font-weight: bold;
+  color: #3f7f12;
+}
+
+/* line 119, scss/addon.scss */
+.page-column ol li p {
+  font-weight: normal;
+  color: #000;
+}
+
+/* line 125, scss/addon.scss */
+.page-column ol li:before {
+  counter-increment: item;
+  content: counters(item, ".") ".";
+  float: left;
+  margin-right: .6em;
+}
+
+/* line 135, scss/addon.scss */
+.page-column ul ul {
+  margin-bottom: 0;
+}
+/* line 139, scss/addon.scss */
+.page-column ul li {
+  position: relative;
+  padding-left: 20px;
+}
+/* line 144, scss/addon.scss */
+.page-column ul li:before {
+  position: absolute;
+  content: "\2014";
+  font-size: 20px;
+  line-height: 1;
+  width: 0.7em;
+  overflow: hidden;
+  left: 0;
+  top: -2px;
+  color: #3F7F12;
+}
+
+/* line 159, scss/addon.scss */
+.content .article-author {
+  margin-bottom: 0;
+  font-weight: bold;
+  font-style: italic;
+}

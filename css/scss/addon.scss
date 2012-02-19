@@ -14,8 +14,16 @@
 	}
 }
 
-.picture-centered {
+.content .picture-centered {
 	text-align:center;
+    vertical-align:top;
+    margin:0 -10px -10px;
+}
+
+.picture-centered img {
+    display:inline-block;
+    vertical-align:top;
+    margin: 0 10px 30px;
 }
 
 p.accent {
@@ -82,4 +90,74 @@ p.accent {
 	.bdt {
 		border-top:1px solid #767772;
 	}
+}
+
+/* lists (duplicated styles for teditor
+--------------------------------*/
+ol, ul { list-style: none; }
+
+.page-column ul, .page-column ol {
+	margin-bottom:15px;
+}
+
+.page-column ol {
+	margin-left:0;
+	counter-reset: item;
+}
+
+.page-column ol ol {
+	margin-left:20px;
+}
+
+.page-column ol li {
+	display: block;
+	clear:both;
+    font-weight:bold;
+    color:#3f7f12	;
+}                       
+
+.page-column ol li p {
+    font-weight:normal;
+    color:#000;
+}
+
+
+.page-column ol li:before {
+	counter-increment: item;
+	content: counters(item, ".") ".";
+	float:left;
+	margin-right:.6em;
+}
+
+.page-column {
+  & ul {
+
+		& ul {
+			margin-bottom:0;
+		}
+
+		& li {
+			position:relative;
+			padding-left:20px;
+		}
+
+		& li:before {
+			position: absolute;
+			content: "\2014";
+			font-size:20px;
+			line-height:1;
+			width:0.7em;
+			overflow:hidden;
+			left: 0;
+			top: -2px;
+			color:#3F7F12;
+		}
+  }
+
+}
+
+.content .article-author {
+    margin-bottom:0;
+     font-weight:bold;
+    font-style:italic;
 }
